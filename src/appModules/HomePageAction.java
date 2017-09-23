@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import utility.*;
 import pageObjects.*;
-import utility.Constants;
+import config.Constants;
 import pageObjects.HomePage;
 
 public class HomePageAction {
