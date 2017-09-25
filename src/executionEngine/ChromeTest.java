@@ -28,6 +28,6 @@ public class ChromeTest
 	 @AfterClass
 	 public void afterClass() throws Exception
 	 {
-		 //driver.close();
+		 driver.close();
 	 }
 }
