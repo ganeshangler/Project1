@@ -19,26 +19,26 @@ public class Category {
 	public static WebElement AddCategory (WebDriver driver) throws IOException
 	{
 		parser.RepositoryParser(Constants.path_ObjectRepo);
-		 element = driver.findElement(parser.getLocator("Add_Category"));
+		element = driver.findElement(parser.getLocator("Add_Category"));
 		return element;
 
 	}
-	
+
 	public static WebElement Button_save(WebDriver driver) throws IOException
 	{
 		parser.RepositoryParser(Constants.path_ObjectRepo);
-		 element = driver.findElement(parser.getLocator("Category_ButtonSave"));
-			return element;
+		element = driver.findElement(parser.getLocator("Category_ButtonSave"));
+		return element;
 
 
 	}
 	public static WebElement Button_cancel(WebDriver driver) throws IOException
 	{
 		parser.RepositoryParser(Constants.path_ObjectRepo);
-		 element = driver.findElement(parser.getLocator("Catregory_ButtonCancel"));
-			return element;
+		element = driver.findElement(parser.getLocator("Catregory_ButtonCancel"));
+		return element;
 
 	}
-	
+
 
 }
