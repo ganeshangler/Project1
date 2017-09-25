@@ -21,14 +21,13 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class CategoryTest extends Utilis {
-	String FacebookURL,TwitterURL,YoutubeURL,WebSiteURL;
+public class CategoryTest extends FirefoxTest {
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
 	ExtentTest test;
 	@BeforeTest
 
-	/*public void startReport()
+	public void startReport()
 	{
 		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/MyownReport.html");
 		extent = new ExtentReports();
@@ -40,7 +39,7 @@ public class CategoryTest extends Utilis {
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 		htmlReporter.config().setTheme(Theme.STANDARD);
 
-	} */
+	} 
 	@Test
 	public void addcategory() throws Exception {
 		
@@ -50,7 +49,7 @@ public class CategoryTest extends Utilis {
 		
 	}
 	
-	/*@AfterMethod
+	@AfterMethod
 	public void getResult(ITestResult result) 
 	{
 
@@ -76,6 +75,6 @@ public class CategoryTest extends Utilis {
 	public void teardown()
 	{
 		extent.flush();
-	}*/
+	}
 
 }

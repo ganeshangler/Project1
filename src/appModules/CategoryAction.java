@@ -32,7 +32,9 @@ public static void addcategory(WebDriver driver) throws IOException, Interrupted
 	WebDriverWait wait = new WebDriverWait(driver, 60);
 	wait.until(ExpectedConditions.stalenessOf(element));
 	element.sendKeys("Testcategory");
-	Category.Button_save(driver).click();
+	WebElement ele1=Category.Button_save(driver);
+	Utilis.ExecuteorClick(ele1);
+	//Category.Button_save(driver).click();
 }
 }
 

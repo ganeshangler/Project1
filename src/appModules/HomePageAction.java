@@ -27,11 +27,11 @@ public class HomePageAction {
 	
 	public static void navigate_Category(WebDriver driver)throws Exception
 	{
-		Utilis.capture(driver,"homepage");
+		//Utilis.capture(driver,"homepage");
 		HomePage.Icon_Masters(driver).click();
 		Thread.sleep(4000);
 		HomePage.Link_Category(driver).click();
-		Utilis.capture(driver,"CategoryPage");
+		//Utilis.capture(driver,"CategoryPage");
 		
 	}
 }
