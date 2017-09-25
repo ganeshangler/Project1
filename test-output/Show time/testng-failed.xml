@@ -5,8 +5,9 @@
     <classes>
       <class name="executionEngine.AboutEvent">
         <methods>
-          <include name="OpenBrowse"/>
           <include name="AboutEventEdit"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
         </methods>
       </class> <!-- executionEngine.AboutEvent -->
     </classes>
