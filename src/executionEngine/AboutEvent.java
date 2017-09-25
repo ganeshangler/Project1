@@ -24,9 +24,9 @@ import appModules.HomePageAction;
 import appModules.LoginAction;
 import config.Constants;
 
-public class AboutEvent extends ChromeTest {
+public class AboutEvent extends FirefoxTest {
 	String FacebookURL,TwitterURL,YoutubeURL,WebSiteURL;
-	/*ExtentHtmlReporter htmlReporter;
+	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
 	ExtentTest test;
 	@BeforeTest
@@ -43,7 +43,7 @@ public class AboutEvent extends ChromeTest {
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 		htmlReporter.config().setTheme(Theme.STANDARD);
 
-	}*/
+	}
 	@Test
 	public void AboutEventEdit() throws Exception {
 
@@ -62,12 +62,12 @@ public class AboutEvent extends ChromeTest {
 			LoginAction.execute_Login(driver);
 			HomePageAction.navigate_aboutEvent(driver);
 			AboutEventEditAction.Editnews(driver,FacebookURL,TwitterURL ,YoutubeURL,WebSiteURL);
-			/*test=extent.createTest("AboutEventEdit","This  will perform negative test");
-			Assert.assertTrue(true);*/
+			test=extent.createTest("AboutEventEdit","This  will perform negative test");
+			Assert.assertTrue(true);
 		}
 	}
 
-	/*@AfterMethod
+	@AfterMethod
 	public void getResult(ITestResult result) 
 	{
 
@@ -87,11 +87,12 @@ public class AboutEvent extends ChromeTest {
 			test.skip(result.getThrowable());
 		}
 
-		driver.quit();
+		driver.close();
 	}
 	@AfterTest()
 	public void teardown()
 	{
 		extent.flush();
-	}*/
+		
+	}
 }
