@@ -4,9 +4,9 @@
  
   <test name="Edit">
 	 <classes>
-   <class name="executionEngine.AboutEvent">
+   <class name="executionEngine.CategoryTest">
        	<methods>
-       		<include name="AboutEventEdit" />
+       		<include name="editandectivatecategory" />
        	</methods>
        </class>
        

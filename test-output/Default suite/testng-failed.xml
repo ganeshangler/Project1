@@ -6,8 +6,8 @@
       <class name="executionEngine.CategoryTest">
         <methods>
           <include name="OpenBrowse"/>
+          <include name="editandectivatecategory"/>
           <include name="getResult"/>
-          <include name="addcategory"/>
           <include name="startReport"/>
         </methods>
       </class> <!-- executionEngine.CategoryTest -->

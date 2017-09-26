@@ -15,7 +15,7 @@ import org.testng.annotations.BeforeTest;
 
 import config.Constants;
 public class Utilis {
-	protected static WebDriver driver;
+	public static WebDriver driver;
 	
 	 @BeforeClass
 	 public void  OpenBrowse () {
@@ -31,19 +31,20 @@ public class Utilis {
 			jsx.executeScript("window.scrollBy(0,450)", "");
 			return  driver;
 		}
-	public static String capture(WebDriver driver,String screenShotName) throws IOException
+	public static String capture(WebDriver driver, String screenShotName) throws IOException
     {
-        TakesScreenshot ts = (TakesScreenshot)driver;
+        TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
         String dest = System.getProperty("user.dir") +"\\Screenshots\\"+screenShotName+".png";
         File destination = new File(dest);
         FileUtils.copyFile(source, destination);                         
         return dest;
     }
-	public static void ExecuteorClick (WebElement ele) throws IOException
+	public static WebDriver ExecuteorClick (WebDriver driver,WebElement ele) throws IOException
 	{
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", ele);
+		return  driver;
 	}
 }
 

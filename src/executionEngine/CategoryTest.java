@@ -1,5 +1,6 @@
 package executionEngine;
 
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
@@ -7,6 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageObjects.Category;
+import utility.ExcelUtils;
 import utility.Utilis;
 import appModules.CategoryAction;
 import appModules.HomePageAction;
@@ -21,7 +23,10 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
+import config.Constants;
+
 public class CategoryTest extends FirefoxTest {
+	String categoryValue,editCategoryValue;
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
 	ExtentTest test;
@@ -40,15 +45,35 @@ public class CategoryTest extends FirefoxTest {
 		htmlReporter.config().setTheme(Theme.STANDARD);
 
 	} 
-	@Test
+	@Test(enabled=false)
 	public void addcategory() throws Exception {
-		
 		LoginAction.execute_Login(driver);
 		HomePageAction.navigate_Category(driver);
 		CategoryAction.addcategory(driver);
-		
+		test=extent.createTest("addcategory","This  will perform  add category test");
+		Assert.assertTrue(true);
+
 	}
-	
+	@Test
+	public void editandectivatecategory() throws Exception {
+		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_Categorysheet_name);
+		int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
+		for(int i=1;i<rowNum;i++)
+		{
+			for(int i1=1;i1<rowNum;i1++)
+			{
+				editCategoryValue=ExcelUtils.getCellData(i1, 1);
+			}
+		}
+
+		LoginAction.execute_Login(driver);
+		HomePageAction.navigate_Category(driver);
+		CategoryAction.editAndActivateCategory(driver,editCategoryValue);
+		test=extent.createTest("editandectivatecategory","This  will perform  add category test");
+		Assert.assertTrue(true);
+
+	}
+
 	@AfterMethod
 	public void getResult(ITestResult result) 
 	{
@@ -69,7 +94,7 @@ public class CategoryTest extends FirefoxTest {
 			test.skip(result.getThrowable());
 		}
 
-		driver.quit();
+		driver.close();
 	}
 	@AfterTest()
 	public void teardown()

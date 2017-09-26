@@ -11,7 +11,8 @@ public class Constants
 	public static String getPath_ObjectRepo=System.getProperty("user.dir")+"\\ObjectRepo.properties";
 	public static final String path_ObjectRepo=getPath_ObjectRepo.replace("\\", "\\\\");
     public static final String File_TestData = "TestData.xls";
-	public static final String File_AboutEventsheet_name="AboutEvent";	
+	public static final String File_AboutEventsheet_name="AboutEvent";
+	public static final String File_Categorysheet_name="Category";
 
 }
 

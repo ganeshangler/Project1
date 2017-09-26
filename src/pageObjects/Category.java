@@ -33,10 +33,36 @@ public class Category {
 	public static WebElement Button_cancel(WebDriver driver) throws IOException
 	{
 		parser.RepositoryParser(Constants.path_ObjectRepo);
-		element = driver.findElement(parser.getLocator("Catregory_ButtonCancel"));
+		element = driver.findElement(parser.getLocator("Category_ButtonCancel"));
 		return element;
-
+		
 	}
-
-
+	public static WebElement Textbox_Category(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Category_Textbox"));
+		return element;
+		
+	}
+	public static WebElement EditIcon_Category(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Category_EditIcon"));
+		return element;
+		
+	}
+	public static WebElement GridValue_Category(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Category_Gridvalue"));
+		return element;
+		
+	}
+	public static WebElement Activate_Category(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Category_Activate"));
+		return element;
+		
+	}
 }
