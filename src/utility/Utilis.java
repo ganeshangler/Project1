@@ -31,9 +31,10 @@ public class Utilis {
 			jsx.executeScript("window.scrollBy(0,450)", "");
 			return  driver;
 		}
-	public static String capture(WebDriver driver, String screenShotName) throws IOException
+	public static String capture(WebDriver driver, String screenShotName) throws IOException, InterruptedException
     {
-        TakesScreenshot ts = (TakesScreenshot) driver;
+        Thread.sleep(3000);
+		TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
         String dest = System.getProperty("user.dir") +"\\Screenshots\\"+screenShotName+".png";
         File destination = new File(dest);

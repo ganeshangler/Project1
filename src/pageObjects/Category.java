@@ -65,4 +65,14 @@ public class Category {
 		return element;
 		
 	}
+	
+	
+	public static WebElement TextboxSearch_Category(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Category_Searchbox"));
+		return element;
+		
+	}
+	
 }

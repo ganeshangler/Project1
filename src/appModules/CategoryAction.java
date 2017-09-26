@@ -23,7 +23,7 @@ import utility.*;
 
 public class CategoryAction {
 
-	public static void addcategory(WebDriver driver) throws IOException, InterruptedException
+	public static void addcategory(WebDriver driver,String categoryValue) throws IOException, InterruptedException
 	{
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		Category.AddCategory(driver).click();
@@ -45,7 +45,7 @@ public class CategoryAction {
 		{
 			System.out.println("Mandatory alert is displayed when input is not entered");
 			WebElement element=Category.Textbox_Category(driver);
-			element.sendKeys("Testcategory");
+			element.sendKeys(categoryValue);
 			System.out.println("Typedtext");
 			Utilis.ExecuteorClick(driver,savebutton);
 		}
@@ -88,10 +88,16 @@ public class CategoryAction {
 		{
 			System.out.println("Testfailed");
 		}
-		Category.Activate_Category(driver).click();
+		WebElement Activate=Category.Activate_Category(driver);
+		Utilis.ExecuteorClick(driver,Activate);
 		System.out.println("activate is clicked");
 		Utilis.capture(driver,"CategoryEdit2");
 	}
 
+	public static void searchAndDeletecategory(WebDriver driver,String editCategoryValue) throws IOException, InterruptedException
+	{
+		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
+		Category.TextboxSearch_Category(driver).sendKeys(editCategoryValue);
+	}
 }
 

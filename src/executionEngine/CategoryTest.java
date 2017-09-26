@@ -47,9 +47,19 @@ public class CategoryTest extends FirefoxTest {
 	} 
 	@Test(enabled=false)
 	public void addcategory() throws Exception {
+		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Categorysheet_name);
+		int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
+		for(int i=1;i<rowNum;i++)
+		{
+			for(int i1=1;i1<rowNum;i1++)
+			{
+				categoryValue=ExcelUtils.getCellData(i1, 0);
+			}
+		}
+
 		LoginAction.execute_Login(driver);
 		HomePageAction.navigate_Category(driver);
-		CategoryAction.addcategory(driver);
+		CategoryAction.addcategory(driver,categoryValue);
 		test=extent.createTest("addcategory","This  will perform  add category test");
 		Assert.assertTrue(true);
 
@@ -74,6 +84,25 @@ public class CategoryTest extends FirefoxTest {
 
 	}
 
+	@Test
+	public void searchAndDeletecategory() throws Exception {
+		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_Categorysheet_name);
+		int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
+		for(int i=1;i<rowNum;i++)
+		{
+			for(int i1=1;i1<rowNum;i1++)
+			{
+				editCategoryValue=ExcelUtils.getCellData(i1, 1);
+			}
+		}
+
+		LoginAction.execute_Login(driver);
+		HomePageAction.navigate_Category(driver);
+		CategoryAction.searchAndDeletecategory(driver,editCategoryValue);
+		test=extent.createTest("editandectivatecategory","This  will perform  add category test");
+		Assert.assertTrue(true);
+
+	}
 	@AfterMethod
 	public void getResult(ITestResult result) 
 	{
