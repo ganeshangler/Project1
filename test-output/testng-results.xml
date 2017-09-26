@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26767" started-at="2017-09-26T05:20:18Z" finished-at="2017-09-26T05:20:45Z">
+  <suite name="Default suite" duration-ms="41686" started-at="2017-09-26T05:44:52Z" finished-at="2017-09-26T05:45:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26767" started-at="2017-09-26T05:20:18Z" finished-at="2017-09-26T05:20:45Z">
+    <test name="Default test" duration-ms="41686" started-at="2017-09-26T05:44:52Z" finished-at="2017-09-26T05:45:34Z">
       <class name="executionEngine.CategoryTest">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="startReport" is-config="true" duration-ms="242" started-at="2017-09-26T10:50:18Z" finished-at="2017-09-26T10:50:18Z">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="startReport" is-config="true" duration-ms="186" started-at="2017-09-26T11:14:53Z" finished-at="2017-09-26T11:14:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="OpenBrowse()[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="OpenBrowse" is-config="true" duration-ms="7004" started-at="2017-09-26T10:50:18Z" finished-at="2017-09-26T10:50:25Z">
+        <test-method status="PASS" signature="OpenBrowse()[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="OpenBrowse" is-config="true" duration-ms="6971" started-at="2017-09-26T11:14:53Z" finished-at="2017-09-26T11:15:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowse -->
-        <test-method status="PASS" signature="editandectivatecategory()[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="editandectivatecategory" duration-ms="18910" started-at="2017-09-26T10:50:25Z" finished-at="2017-09-26T10:50:44Z">
+        <test-method status="PASS" signature="editandectivatecategory()[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="editandectivatecategory" duration-ms="34108" started-at="2017-09-26T11:15:00Z" finished-at="2017-09-26T11:15:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- editandectivatecategory -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="getResult" is-config="true" duration-ms="39" started-at="2017-09-26T10:50:44Z" finished-at="2017-09-26T10:50:44Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="getResult" is-config="true" duration-ms="35" started-at="2017-09-26T11:15:34Z" finished-at="2017-09-26T11:15:34Z">
           <params>
             <param index="0">
               <value>
@@ -30,11 +30,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="afterClass" is-config="true" duration-ms="31" started-at="2017-09-26T10:50:44Z" finished-at="2017-09-26T10:50:44Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="afterClass" is-config="true" duration-ms="23" started-at="2017-09-26T11:15:34Z" finished-at="2017-09-26T11:15:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="teardown" is-config="true" duration-ms="527" started-at="2017-09-26T10:50:44Z" finished-at="2017-09-26T10:50:45Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:executionEngine.CategoryTest@42d80b78]" name="teardown" is-config="true" duration-ms="350" started-at="2017-09-26T11:15:34Z" finished-at="2017-09-26T11:15:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
