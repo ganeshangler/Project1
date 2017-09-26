@@ -45,4 +45,21 @@ public class HomePage {
 
 	}
 
+	public static WebElement Link_Logout(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Link_Logout"));
+
+		return element;
+
+	}
+	public static WebElement Icon_Logout(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Icon_Logout"));
+		return element;
+
+	}
 }

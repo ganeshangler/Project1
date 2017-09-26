@@ -3,14 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="executionEngine.AboutEvent">
+      <class name="executionEngine.CategoryTest">
         <methods>
-          <include name="getResult"/>
+          <include name="afterClass"/>
           <include name="OpenBrowse"/>
-          <include name="AboutEventEdit"/>
+          <include name="searchAndDeletecategory"/>
+          <include name="editandectivatecategory"/>
+          <include name="addcategory"/>
           <include name="startReport"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- executionEngine.AboutEvent -->
+      </class> <!-- executionEngine.CategoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

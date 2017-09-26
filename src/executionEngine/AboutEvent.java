@@ -1,6 +1,8 @@
 package executionEngine;
 import java.sql.Driver;
+
 import utility.*;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -9,7 +11,9 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -18,6 +22,7 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+
 import utility.Utilis;
 import appModules.AboutEventEditAction;
 import appModules.HomePageAction;
@@ -45,7 +50,8 @@ public class AboutEvent extends FirefoxTest {
 
 	}
 	@Test
-	public void AboutEventEdit() throws Exception {
+	 @Parameters({"username","password"})
+	public void AboutEventEdit(String username,String password) throws Exception {
 
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_AboutEventsheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_AboutEventsheet_name);
@@ -59,11 +65,12 @@ public class AboutEvent extends FirefoxTest {
 				WebSiteURL=ExcelUtils.getCellData(i1, 3);
 
 			}
-			LoginAction.execute_Login(driver);
+			LoginAction.execute_Login(driver,username, password);
 			HomePageAction.navigate_aboutEvent(driver);
 			AboutEventEditAction.Editnews(driver,FacebookURL,TwitterURL ,YoutubeURL,WebSiteURL);
 			test=extent.createTest("AboutEventEdit","This  will perform negative test");
 			Assert.assertTrue(true);
+			LoginAction.execute_Logout(driver);
 		}
 	}
 

@@ -5,6 +5,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import pageObjects.Category;
@@ -45,8 +46,9 @@ public class CategoryTest extends FirefoxTest {
 		htmlReporter.config().setTheme(Theme.STANDARD);
 
 	} 
-	@Test(enabled=false)
-	public void addcategory() throws Exception {
+	@Test(priority=1)
+	 @Parameters({"username","password"})
+	public void addcategory(String username,String password) throws Exception {
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Categorysheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
 		for(int i=1;i<rowNum;i++)
@@ -57,15 +59,17 @@ public class CategoryTest extends FirefoxTest {
 			}
 		}
 
-		LoginAction.execute_Login(driver);
+		LoginAction.execute_Login( driver,username, password);
 		HomePageAction.navigate_Category(driver);
 		CategoryAction.addcategory(driver,categoryValue);
-		test=extent.createTest("addcategory","This  will perform  add category test");
+		test=extent.createTest("addcategory","This  will perform  add category ");
 		Assert.assertTrue(true);
+		LoginAction.execute_Logout(driver);
 
 	}
-	@Test
-	public void editandectivatecategory() throws Exception {
+	@Test(priority=2)
+	 @Parameters({"username","password"})
+	public void editandectivatecategory(String username,String password) throws Exception {
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_Categorysheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
 		for(int i=1;i<rowNum;i++)
@@ -76,16 +80,18 @@ public class CategoryTest extends FirefoxTest {
 			}
 		}
 
-		LoginAction.execute_Login(driver);
+		LoginAction.execute_Login( driver,username, password);
 		HomePageAction.navigate_Category(driver);
 		CategoryAction.editAndActivateCategory(driver,editCategoryValue);
-		test=extent.createTest("editandectivatecategory","This  will perform  add category test");
+		test=extent.createTest("editandectivatecategory","This  will perform  edit and activate category");
 		Assert.assertTrue(true);
+		LoginAction.execute_Logout(driver);
 
 	}
 
-	@Test
-	public void searchAndDeletecategory() throws Exception {
+	@Test(priority=3)
+	 @Parameters({"username","password"})
+	public void searchAndDeletecategory(String username,String password) throws Exception {
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_Categorysheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
 		for(int i=1;i<rowNum;i++)
@@ -96,11 +102,12 @@ public class CategoryTest extends FirefoxTest {
 			}
 		}
 
-		LoginAction.execute_Login(driver);
+		LoginAction.execute_Login( driver,username, password);
 		HomePageAction.navigate_Category(driver);
 		CategoryAction.searchAndDeletecategory(driver,editCategoryValue);
-		test=extent.createTest("editandectivatecategory","This  will perform  add category test");
+		test=extent.createTest("searchAndDeletecategory","This  will perform search and delete category test");
 		Assert.assertTrue(true);
+		LoginAction.execute_Logout(driver);
 
 	}
 	@AfterMethod
@@ -123,12 +130,13 @@ public class CategoryTest extends FirefoxTest {
 			test.skip(result.getThrowable());
 		}
 
-		driver.close();
+		//driver.close();
 	}
 	@AfterTest()
 	public void teardown()
 	{
 		extent.flush();
+		driver.close();
 	}
 
 }

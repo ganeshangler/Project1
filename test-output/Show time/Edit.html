@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Edit</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 25 18:02:08 IST 2017</td>
+<td>Started on:</td><td>Tue Sep 26 14:47:40 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>28 seconds (28277 ms)</td>
+<tr><td>Total time:</td><td>100 seconds (100747 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,75 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='executionEngine.CategoryTest.afterClass()'><b>afterClass</b><br>Test class: executionEngine.CategoryTest</td>
-<td><div><pre>org.openqa.selenium.remote.SessionNotFoundException: The FirefoxDriver cannot be used after quit() was called.
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
-System info: host: &apos;angler108&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_74&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:377)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:521)
-	at executionEngine.FirefoxTest.afterClass(FirefoxTest.java:32)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace644082020", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace644082020'><pre>org.openqa.selenium.remote.SessionNotFoundException: The FirefoxDriver cannot be used after quit() was called.
-Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
-System info: host: &apos;angler108&apos;, ip: &apos;192.168.0.108&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_74&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:377)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:701)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:521)
-	at executionEngine.FirefoxTest.afterClass(FirefoxTest.java:32)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
-	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:220)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-</pre></div></td>
-<td>0</td>
-<td>executionEngine.CategoryTest@5c3bd550</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='executionEngine.CategoryTest.teardown()'><b>teardown</b><br>Test class: executionEngine.CategoryTest</td>
-<td></td>
-<td>0</td>
-<td>null</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -144,10 +75,20 @@ Driver info: driver.version: RemoteWebDriver
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='executionEngine.CategoryTest.editandectivatecategory()'><b>editandectivatecategory</b><br>Test class: executionEngine.CategoryTest</td>
+<td title='executionEngine.CategoryTest.addcategory()'><b>addcategory</b><br>Test class: executionEngine.CategoryTest<br>Parameters: eoty2017@showtimemobileapp.com, eoty2017</td>
 <td></td>
-<td>18</td>
-<td>executionEngine.CategoryTest@5c3bd550</td></tr>
+<td>35</td>
+<td>executionEngine.CategoryTest@685cb137</td></tr>
+<tr>
+<td title='executionEngine.CategoryTest.editandectivatecategory()'><b>editandectivatecategory</b><br>Test class: executionEngine.CategoryTest<br>Parameters: eoty2017@showtimemobileapp.com, eoty2017</td>
+<td></td>
+<td>36</td>
+<td>executionEngine.CategoryTest@685cb137</td></tr>
+<tr>
+<td title='executionEngine.CategoryTest.searchAndDeletecategory()'><b>searchAndDeletecategory</b><br>Test class: executionEngine.CategoryTest<br>Parameters: eoty2017@showtimemobileapp.com, eoty2017</td>
+<td></td>
+<td>20</td>
+<td>executionEngine.CategoryTest@685cb137</td></tr>
 </table><p>
 </body>
 </html>

@@ -75,4 +75,19 @@ public class Category {
 		
 	}
 	
+	public static WebElement DeleteIcon_Category(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Category_DeleteIcon"));
+		return element;
+		
+	}
+	
+	public static WebElement SearchGridValue_Category(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Category_SearchGridvalue"));
+		return element;
+		
+	}
 }

@@ -51,7 +51,7 @@ public class CategoryAction {
 		}
 		System.out.println("clicked save");
 		driver.switchTo().alert().accept();	
-		driver.close();
+		
 	}
 	public static void editAndActivateCategory(WebDriver driver,String editCategoryValue) throws IOException, InterruptedException
 	{
@@ -98,6 +98,14 @@ public class CategoryAction {
 	{
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		Category.TextboxSearch_Category(driver).sendKeys(editCategoryValue);
+		String Gridvalue=Category.SearchGridValue_Category(driver).getText();
+		System.out.println(Gridvalue);
+		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
+		Category.DeleteIcon_Category(driver).click();
+		System.out.println("clicked delete");
+		driver.switchTo().alert().accept();	
+
+
 	}
 }
 

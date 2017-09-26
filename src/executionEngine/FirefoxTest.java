@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 
 import config.Constants;
 
@@ -14,7 +15,7 @@ public class FirefoxTest
 {
 	protected static WebDriver driver;
 	
-	 @BeforeClass
+	 @BeforeTest
 	 public void  OpenBrowse () {
 			
 		 FirefoxProfile profile = new FirefoxProfile();
@@ -29,6 +30,6 @@ public class FirefoxTest
 	 @AfterClass
 	 public void afterClass() throws Exception
 	 {
-		 driver.close();
+		// driver.close();
 	 }
 }
