@@ -25,7 +25,7 @@ public class Utilis {
 			    driver.get(Constants.baseUrl);
 
 		}
-	 public static WebDriver  ScrollDown() {
+	 public static WebDriver  ScrollDown(WebDriver driver) {
 
 			JavascriptExecutor jsx = (JavascriptExecutor)driver;
 			jsx.executeScript("window.scrollBy(0,450)", "");

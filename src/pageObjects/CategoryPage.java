@@ -11,7 +11,7 @@ import org.openqa.selenium.WebElement;
 import utility.RepositoryParser;
 import config.Constants;
 
-public class Category {
+public class CategoryPage {
 	public static RepositoryParser parser=new RepositoryParser();
 	private static WebElement element = null;
 	public static WebElement AddCategory (WebDriver driver) throws IOException

@@ -62,4 +62,21 @@ public class HomePage {
 		return element;
 
 	}
+	public static WebElement Link_Schedule(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Link_Schedule"));
+
+		return element;
+
+	}
+	public static WebElement Icon_Schedule(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Icon_Schedule"));
+		return element;
+
+	}
 }

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Show time" duration-ms="100747" started-at="2017-09-26T09:17:40Z" finished-at="2017-09-26T09:19:20Z">
+  <suite name="Show time" duration-ms="36943" started-at="2017-09-27T07:37:11Z" finished-at="2017-09-27T07:37:48Z">
     <groups>
     </groups>
-    <test name="Edit" duration-ms="100747" started-at="2017-09-26T09:17:40Z" finished-at="2017-09-26T09:19:20Z">
-      <class name="executionEngine.CategoryTest">
-        <test-method status="PASS" signature="OpenBrowse()[pri:0, instance:executionEngine.CategoryTest@685cb137]" name="OpenBrowse" is-config="true" duration-ms="6915" started-at="2017-09-26T14:47:40Z" finished-at="2017-09-26T14:47:47Z">
+    <test name="Edit" duration-ms="36943" started-at="2017-09-27T07:37:11Z" finished-at="2017-09-27T07:37:48Z">
+      <class name="executionEngine.ScheduleManagement">
+        <test-method status="PASS" signature="OpenBrowse()[pri:0, instance:executionEngine.ScheduleManagement@6a4f787b]" name="OpenBrowse" is-config="true" duration-ms="7679" started-at="2017-09-27T13:07:11Z" finished-at="2017-09-27T13:07:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowse -->
-        <test-method status="PASS" signature="startReport()[pri:0, instance:executionEngine.CategoryTest@685cb137]" name="startReport" is-config="true" duration-ms="101" started-at="2017-09-26T14:47:47Z" depends-on-methods="executionEngine.FirefoxTest.OpenBrowse" finished-at="2017-09-26T14:47:47Z">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:executionEngine.ScheduleManagement@6a4f787b]" name="startReport" is-config="true" duration-ms="131" started-at="2017-09-27T13:07:19Z" depends-on-methods="executionEngine.FirefoxTest.OpenBrowse" finished-at="2017-09-27T13:07:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="addcategory(java.lang.String, java.lang.String)[pri:1, instance:executionEngine.CategoryTest@685cb137]" name="addcategory" duration-ms="35980" started-at="2017-09-26T14:47:47Z" finished-at="2017-09-26T14:48:23Z">
+        <test-method status="PASS" signature="addcategory(java.lang.String, java.lang.String)[pri:1, instance:executionEngine.ScheduleManagement@6a4f787b]" name="addcategory" duration-ms="29092" started-at="2017-09-27T13:07:19Z" finished-at="2017-09-27T13:07:48Z">
           <params>
             <param index="0">
               <value>
@@ -31,80 +31,59 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addcategory -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.CategoryTest@685cb137]" name="getResult" is-config="true" duration-ms="10" started-at="2017-09-26T14:48:23Z" finished-at="2017-09-26T14:48:23Z">
+        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.ScheduleManagement@6a4f787b]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-27T13:07:48Z" finished-at="2017-09-27T13:07:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addcategory status=SUCCESS method=CategoryTest.addcategory(java.lang.String, java.lang.String)[pri:1, instance:executionEngine.CategoryTest@685cb137] output={null}]]]>
+                <![CDATA[[TestResult name=addcategory status=SUCCESS method=ScheduleManagement.addcategory(java.lang.String, java.lang.String)[pri:1, instance:executionEngine.ScheduleManagement@6a4f787b] output={null}]]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at executionEngine.ScheduleManagement.getResult(ScheduleManagement.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:703)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="editandectivatecategory(java.lang.String, java.lang.String)[pri:2, instance:executionEngine.CategoryTest@685cb137]" name="editandectivatecategory" duration-ms="36672" started-at="2017-09-26T14:48:23Z" finished-at="2017-09-26T14:48:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[eoty2017@showtimemobileapp.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[eoty2017]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- editandectivatecategory -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.CategoryTest@685cb137]" name="getResult" is-config="true" duration-ms="1" started-at="2017-09-26T14:48:59Z" finished-at="2017-09-26T14:48:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=editandectivatecategory status=SUCCESS method=CategoryTest.editandectivatecategory(java.lang.String, java.lang.String)[pri:2, instance:executionEngine.CategoryTest@685cb137] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="searchAndDeletecategory(java.lang.String, java.lang.String)[pri:3, instance:executionEngine.CategoryTest@685cb137]" name="searchAndDeletecategory" duration-ms="20625" started-at="2017-09-26T14:48:59Z" finished-at="2017-09-26T14:49:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[eoty2017@showtimemobileapp.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[eoty2017]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchAndDeletecategory -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.CategoryTest@685cb137]" name="getResult" is-config="true" duration-ms="0" started-at="2017-09-26T14:49:20Z" finished-at="2017-09-26T14:49:20Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=searchAndDeletecategory status=SUCCESS method=CategoryTest.searchAndDeletecategory(java.lang.String, java.lang.String)[pri:3, instance:executionEngine.CategoryTest@685cb137] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:executionEngine.CategoryTest@685cb137]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-09-26T14:49:20Z" finished-at="2017-09-26T14:49:20Z">
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:executionEngine.ScheduleManagement@6a4f787b]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-09-27T13:07:48Z" finished-at="2017-09-27T13:07:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:executionEngine.CategoryTest@685cb137]" name="teardown" is-config="true" duration-ms="423" started-at="2017-09-26T14:49:20Z" finished-at="2017-09-26T14:49:20Z">
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:executionEngine.ScheduleManagement@6a4f787b]" name="teardown" is-config="true" duration-ms="0" started-at="2017-09-27T13:07:48Z" finished-at="2017-09-27T13:07:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- executionEngine.CategoryTest -->
+      </class> <!-- executionEngine.ScheduleManagement -->
     </test> <!-- Edit -->
   </suite> <!-- Show time -->
 </testng-results>

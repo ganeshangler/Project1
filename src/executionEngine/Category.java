@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import pageObjects.Category;
+import pageObjects.CategoryPage;
 import utility.ExcelUtils;
 import utility.Utilis;
 import appModules.CategoryAction;
@@ -26,7 +26,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import config.Constants;
 
-public class CategoryTest extends FirefoxTest {
+public class Category extends FirefoxTest {
 	String categoryValue,editCategoryValue;
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;

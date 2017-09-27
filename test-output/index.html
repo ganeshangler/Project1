@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,17 +101,7 @@
                     <div class="method-list-content passed suite-Show_time">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.CategoryTest" hash-for-method="addcategory(eoty2017@showtimemobileapp.com, eoty2017)">addcategory(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.CategoryTest" hash-for-method="editandectivatecategory(eoty2017@showtimemobileapp.com, eoty2017)">editandectivatecategory(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.CategoryTest" hash-for-method="searchAndDeletecategory(eoty2017@showtimemobileapp.com, eoty2017)">searchAndDeletecategory(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.ScheduleManagement" hash-for-method="addcategory(eoty2017@showtimemobileapp.com, eoty2017)">addcategory(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Show_time -->
@@ -129,7 +119,7 @@
           <div class="suite-Show_time-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">executionEngine.CategoryTest</span>
+              <span class="class-name">executionEngine.ScheduleManagement</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -137,22 +127,6 @@
                   <a name="addcategory(eoty2017@showtimemobileapp.com, eoty2017)">
                   </a> <!-- addcategory(eoty2017@showtimemobileapp.com, eoty2017) -->
                   <span class="method-name">addcategory</span>
-                  <span class="parameters">(eoty2017@showtimemobileapp.com, eoty2017)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="editandectivatecategory(eoty2017@showtimemobileapp.com, eoty2017)">
-                  </a> <!-- editandectivatecategory(eoty2017@showtimemobileapp.com, eoty2017) -->
-                  <span class="method-name">editandectivatecategory</span>
-                  <span class="parameters">(eoty2017@showtimemobileapp.com, eoty2017)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchAndDeletecategory(eoty2017@showtimemobileapp.com, eoty2017)">
-                  </a> <!-- searchAndDeletecategory(eoty2017@showtimemobileapp.com, eoty2017) -->
-                  <span class="method-name">searchAndDeletecategory</span>
                   <span class="parameters">(eoty2017@showtimemobileapp.com, eoty2017)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -172,13 +146,13 @@
   &lt;parameter name=&quot;username&quot; value=&quot;eoty2017@showtimemobileapp.com&quot;/&gt;
   &lt;test name=&quot;Edit&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;executionEngine.CategoryTest&quot;&gt;
+      &lt;class name=&quot;executionEngine.ScheduleManagement&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;addcategory&quot;/&gt;
-          &lt;include name=&quot;editandectivatecategory&quot;/&gt;
-          &lt;include name=&quot;searchAndDeletecategory&quot;/&gt;
+          &lt;exclude name=&quot;editandectivatecategory&quot;/&gt;
+          &lt;exclude name=&quot;searchAndDeletecategory&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- executionEngine.CategoryTest --&gt;
+      &lt;/class&gt; &lt;!-- executionEngine.ScheduleManagement --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Edit --&gt;
 &lt;/suite&gt; &lt;!-- Show time --&gt;
@@ -218,24 +192,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'editandectivatecategory')
-data.setCell(0, 2, 'executionEngine.CategoryTest')
-data.setCell(0, 3, 36672);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'addcategory')
-data.setCell(1, 2, 'executionEngine.CategoryTest')
-data.setCell(1, 3, 35980);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'searchAndDeletecategory')
-data.setCell(2, 2, 'executionEngine.CategoryTest')
-data.setCell(2, 3, 20625);
+data.setCell(0, 1, 'addcategory')
+data.setCell(0, 2, 'executionEngine.ScheduleManagement')
+data.setCell(0, 3, 29092);
 window.suiteTableData['Show_time']= { tableData: data, tableDiv: 'times-div-Show_time'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 29 seconds</span>
               <div id="times-div-Show_time">
               </div> <!-- times-div-Show_time -->
             </div> <!-- times-div -->
@@ -261,47 +227,25 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">executionEngine.CategoryTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">executionEngine.ScheduleManagement</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">OpenBrowse</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">startReport</span>
-                <span class="method-start">6915 ms</span>
+                <span class="method-start">7679 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">addcategory(eoty2017@showtimemobileapp.com, eoty2017)</span>
-                <span class="method-start">7022 ms</span>
+                <span class="method-start">7826 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=addcategory status=SUCCESS method=CategoryTest.addcategory(java.lang.String, java.l...)</span>
-                <span class="method-start">43007 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">getResult([TestResult name=addcategory status=SUCCESS method=ScheduleManagement.addcategory(java.lang.String, ...)</span>
+                <span class="method-start">36920 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">editandectivatecategory(eoty2017@showtimemobileapp.com, eoty2017)</span>
-                <span class="method-start">43018 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=editandectivatecategory status=SUCCESS method=CategoryTest.editandectivatecategory(...)</span>
-                <span class="method-start">79691 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="test-method">
-                <span class="method-name">searchAndDeletecategory(eoty2017@showtimemobileapp.com, eoty2017)</span>
-                <span class="method-start">79692 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=searchAndDeletecategory status=SUCCESS method=CategoryTest.searchAndDeletecategory(...)</span>
-                <span class="method-start">100318 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">100319 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">100320 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

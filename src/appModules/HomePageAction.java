@@ -34,5 +34,14 @@ public class HomePageAction {
 		Utilis.capture(driver,"CategoryPage");
 		
 	}
+	public static void navigate_Schedule(WebDriver driver)throws Exception
+	{
+		Utilis.capture(driver,"homepage");
+		HomePage.Icon_Schedule(driver).click();
+		Thread.sleep(4000);
+		HomePage.Link_Schedule(driver).click();
+		Utilis.capture(driver,"CategoryPage");
+		
+	}
 }
 

@@ -5,11 +5,11 @@
 <parameter name="password" value="eoty2017"/>
   <test name="Edit">
 	 <classes>
-   <class name="executionEngine.CategoryTest">
+   <class name="executionEngine.ScheduleManagement">
        	<methods>
        		<include name="addcategory" />
-       		<include name="editandectivatecategory" />
-       		<include name="searchAndDeletecategory" />
+       		<exclude name="editandectivatecategory" />
+       		<exclude name="searchAndDeletecategory" />
        	</methods>
        </class>   
       </classes>
