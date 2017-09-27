@@ -116,4 +116,55 @@ public class SchedulePage {
 		return element;
 
 	}
+	public static WebElement Icon_ScheduleEit (WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Schedule_EditIcon"));
+		return element;
+
+	}
+	public static WebElement GridText_Title(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Schedule_GridValue"));
+		return element;
+
+	}
+	public static WebElement Icon_Activate(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Schedule_ActivateIcon"));
+		return element;
+
+	}
+	public static WebElement Icon_ViewSchedule(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Schedule_ViewIcon"));
+		return element;
+
+	}
+	public static WebElement Textbox_SearchValue(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Schedule_SearchTextbox"));
+		return element;
+
+	}
+	
+	public static WebElement Icon_DeleteSchedule(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Schedule_DeleteIcon"));
+		return element;
+
+	}
+
+	public static WebElement Button_ViewOK(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Schedule_ViewOk"));
+		return element;
+		
+	}
 }

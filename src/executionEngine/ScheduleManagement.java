@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import pageObjects.SchedulePage;
 import utility.ExcelUtils;
 import appModules.CategoryAction;
 import appModules.HomePageAction;
@@ -66,10 +67,10 @@ public class ScheduleManagement extends FirefoxTest {
 			LoginAction.execute_Logout(driver);*/
 
 		}
-		//@Test(priority=2)
-		// @Parameters({"username","password"})
-		public void editandectivatecategory(String username,String password) throws Exception {
-			ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_Categorysheet_name);
+		@Test(priority=2)
+		 @Parameters({"username","password"})
+		public void editandectivateschedule(String username,String password) throws Exception {
+			/*ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_Categorysheet_name);
 			int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
 			for(int i=1;i<rowNum;i++)
 			{
@@ -78,20 +79,20 @@ public class ScheduleManagement extends FirefoxTest {
 					editCategoryValue=ExcelUtils.getCellData(i1, 1);
 				}
 			}
-
+*/
 			LoginAction.execute_Login( driver,username, password);
-			HomePageAction.navigate_Category(driver);
-			CategoryAction.editAndActivateCategory(driver,editCategoryValue);
-			test=extent.createTest("editandectivatecategory","This  will perform  edit and activate category");
+			HomePageAction.navigate_Schedule(driver);
+			ScheduleAction.editAndActivateSchedule(driver);
+		/*	test=extent.createTest("editandectivatecategory","This  will perform  edit and activate category");
 			Assert.assertTrue(true);
-			LoginAction.execute_Logout(driver);
+			LoginAction.execute_Logout(driver);*/
 
 		}
 
-		//@Test(priority=3)
-		// @Parameters({"username","password"})
-		public void searchAndDeletecategory(String username,String password) throws Exception {
-			ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_Categorysheet_name);
+		@Test(priority=3)
+		@Parameters({"username","password"})
+		public void searchAndDeleteSchedule(String username,String password) throws Exception {
+		/*	ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_Categorysheet_name);
 			int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
 			for(int i=1;i<rowNum;i++)
 			{
@@ -100,10 +101,10 @@ public class ScheduleManagement extends FirefoxTest {
 					editCategoryValue=ExcelUtils.getCellData(i1, 1);
 				}
 			}
-
+*/
 			LoginAction.execute_Login( driver,username, password);
-			HomePageAction.navigate_Category(driver);
-			CategoryAction.searchAndDeletecategory(driver,editCategoryValue);
+			HomePageAction.navigate_Schedule(driver);
+			ScheduleAction.searchAndDeleteSchedule(driver);
 			test=extent.createTest("searchAndDeletecategory","This  will perform search and delete category test");
 			Assert.assertTrue(true);
 			LoginAction.execute_Logout(driver);
