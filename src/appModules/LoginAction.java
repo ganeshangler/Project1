@@ -25,8 +25,9 @@ public class LoginAction   {
 
 	public static void execute_Logout(WebDriver driver)throws Exception
 	{
-		HomePage.Icon_Logout(driver).click();
-		Thread.sleep(2000);
+		WebElement LogoutIcon=HomePage.Icon_Logout(driver);
+		LogoutIcon.click();
+		Thread.sleep(3000);
 		HomePage.Link_Logout(driver).click();
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 

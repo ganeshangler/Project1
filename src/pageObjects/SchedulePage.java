@@ -123,13 +123,7 @@ public class SchedulePage {
 		return element;
 
 	}
-	public static WebElement GridText_Title(WebDriver driver) throws IOException
-	{
-		parser.RepositoryParser(Constants.path_ObjectRepo);
-		element = driver.findElement(parser.getLocator("Schedule_GridValue"));
-		return element;
 
-	}
 	public static WebElement Icon_Activate(WebDriver driver) throws IOException
 	{
 		parser.RepositoryParser(Constants.path_ObjectRepo);
@@ -164,6 +158,21 @@ public class SchedulePage {
 	{
 		parser.RepositoryParser(Constants.path_ObjectRepo);
 		element = driver.findElement(parser.getLocator("Schedule_ViewOk"));
+		return element;
+		
+	}
+	public static WebElement GridValue_Title(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Schedule_GridTitlevalue"));
+		return element;
+		
+	}
+	
+	public static WebElement ViewValue_Title(WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Schedule_ViewTitlevalue"));
 		return element;
 		
 	}

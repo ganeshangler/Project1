@@ -47,17 +47,16 @@ public class Category extends FirefoxTest {
 
 	} 
 	@Test(priority=1)
-	 @Parameters({"username","password"})
+	@Parameters({"username","password"})
 	public void addcategory(String username,String password) throws Exception {
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Categorysheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
-		for(int i=1;i<rowNum;i++)
+
+		for(int i1=1;i1<rowNum;i1++)
 		{
-			for(int i1=1;i1<rowNum;i1++)
-			{
-				categoryValue=ExcelUtils.getCellData(i1, 0);
-			}
+			categoryValue=ExcelUtils.getCellData(i1, 0);
 		}
+
 
 		LoginAction.execute_Login( driver,username, password);
 		HomePageAction.navigate_Category(driver);
@@ -68,17 +67,16 @@ public class Category extends FirefoxTest {
 
 	}
 	@Test(priority=2)
-	 @Parameters({"username","password"})
+	@Parameters({"username","password"})
 	public void editandectivatecategory(String username,String password) throws Exception {
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_Categorysheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
-		for(int i=1;i<rowNum;i++)
+
+		for(int i1=1;i1<rowNum;i1++)
 		{
-			for(int i1=1;i1<rowNum;i1++)
-			{
-				editCategoryValue=ExcelUtils.getCellData(i1, 1);
-			}
+			editCategoryValue=ExcelUtils.getCellData(i1, 1);
 		}
+
 
 		LoginAction.execute_Login( driver,username, password);
 		HomePageAction.navigate_Category(driver);
@@ -90,17 +88,16 @@ public class Category extends FirefoxTest {
 	}
 
 	@Test(priority=3)
-	 @Parameters({"username","password"})
+	@Parameters({"username","password"})
 	public void searchAndDeletecategory(String username,String password) throws Exception {
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_Categorysheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
-		for(int i=1;i<rowNum;i++)
+
+		for(int i1=1;i1<rowNum;i1++)
 		{
-			for(int i1=1;i1<rowNum;i1++)
-			{
-				editCategoryValue=ExcelUtils.getCellData(i1, 1);
-			}
+			editCategoryValue=ExcelUtils.getCellData(i1, 1);
 		}
+
 
 		LoginAction.execute_Login( driver,username, password);
 		HomePageAction.navigate_Category(driver);

@@ -55,8 +55,6 @@ public class AboutEvent extends FirefoxTest {
 
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_AboutEventsheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_AboutEventsheet_name);
-		for(int i=1;i<rowNum;i++)
-		{
 			for(int i1=1;i1<rowNum;i1++)
 			{
 				FacebookURL=ExcelUtils.getCellData(i1, 0);
@@ -72,7 +70,7 @@ public class AboutEvent extends FirefoxTest {
 			Assert.assertTrue(true);
 			LoginAction.execute_Logout(driver);
 		}
-	}
+	
 
 	@AfterMethod
 	public void getResult(ITestResult result) 

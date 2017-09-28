@@ -13,6 +13,7 @@ public class Constants
     public static final String File_TestData = "TestData.xls";
 	public static final String File_AboutEventsheet_name="AboutEvent";
 	public static final String File_Categorysheet_name="Category";
+	public static final String File_Schedulesheet_name="Schedule";
 
 }
 
