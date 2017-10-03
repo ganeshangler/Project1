@@ -43,5 +43,14 @@ public class HomePageAction {
 		Utilis.capture(driver,"CategoryPage");
 		
 	}
+	public static void navigate_NewsMgmt(WebDriver driver)throws Exception
+	{
+		Utilis.capture(driver,"homepage");
+		HomePage.Icon_news(driver).click();
+		Thread.sleep(4000);
+		HomePage.Link_News(driver).click();
+		Utilis.capture(driver,"NEws");
+		
+	}
 }
 

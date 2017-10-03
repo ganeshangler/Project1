@@ -1,5 +1,7 @@
 package executionEngine;
 
+
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -8,12 +10,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import pageObjects.NewsPage;
 import pageObjects.SchedulePage;
 import utility.ExcelUtils;
-import appModules.CategoryAction;
-import appModules.HomePageAction;
-import appModules.LoginAction;
-import appModules.ScheduleAction;
+import appModules.*;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -26,8 +26,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import config.Constants;
 
-public class ScheduleManagement extends FirefoxTest {
-	String VenueValue,TitleValue,DescriptionValue,EditVenueValue,EditTitleValue,EditDescriptionValue;
+public class NewsManagement extends ChromeTest {
+	String Titlevalue,DescriptionValue,EditTitleValue,EditDescriptionValue;
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
 	ExtentTest test;
@@ -49,40 +49,40 @@ public class ScheduleManagement extends FirefoxTest {
 	@Test(priority=1)
 	@Parameters({"username","password"})
 	public void addnews(String username,String password) throws Exception {
-	/*	ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Schedulesheet_name);
-		int rowNum=ExcelUtils.getRowCount(Constants.File_Schedulesheet_name);
+		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Newssheet_name);
+		int rowNum=ExcelUtils.getRowCount(Constants.File_Newssheet_name);
 		for(int i1=1;i1<rowNum;i1++)
 		{
-			VenueValue=ExcelUtils.getCellData(i1, 0);
-			TitleValue=ExcelUtils.getCellData(i1, 1);
-			DescriptionValue=ExcelUtils.getCellData(i1, 2);
-		}*/
+			Titlevalue=ExcelUtils.getCellData(i1, 0);
+			DescriptionValue=ExcelUtils.getCellData(i1, 1);
+	
+		}
 		LoginAction.execute_Login( driver,username, password);
-		HomePageAction.navigate_Schedule(driver);
-		ScheduleAction.addschdule(driver,VenueValue,TitleValue,DescriptionValue);
-		/*test=extent.createTest("addschedule","This  will perform  add schedule ");
+		HomePageAction.navigate_NewsMgmt(driver);
+		NewsManagementAction.addnews(driver,Titlevalue,DescriptionValue);
+		test=extent.createTest("addnews","This  will perform  add schedule ");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);*/
+		LoginAction.execute_Logout(driver);
 
 	}
 	@Test(priority=2)
 	@Parameters({"username","password"})
-	public void editandectivateschedule(String username,String password) throws Exception {
-		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Schedulesheet_name);
-		int rowNum=ExcelUtils.getRowCount(Constants.File_Schedulesheet_name);
+	public void editandectivatenews(String username,String password) throws Exception {
+	   ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Newssheet_name);
+		int rowNum=ExcelUtils.getRowCount(Constants.File_Newssheet_name);
 		for(int i=1;i<rowNum;i++)
 		{
 			for(int i1=1;i1<rowNum;i1++)
 			{
-				EditVenueValue=ExcelUtils.getCellData(i1, 3);
-				EditTitleValue=ExcelUtils.getCellData(i1, 4);
-				EditDescriptionValue=ExcelUtils.getCellData(i1, 5);
+				EditDescriptionValue=ExcelUtils.getCellData(i1, 3);
+				EditTitleValue=ExcelUtils.getCellData(i1, 2);
+
 			}
 		}
 		LoginAction.execute_Login( driver,username, password);
-		HomePageAction.navigate_Schedule(driver);
-		ScheduleAction.editAndActivateSchedule(driver,EditVenueValue,EditTitleValue,EditDescriptionValue);
-		test=extent.createTest("editandectivateschedule","This  will perform  edit and activate schedule");
+		HomePageAction.navigate_NewsMgmt(driver);
+		NewsManagementAction.editandectivatenews(driver,EditTitleValue,EditDescriptionValue);
+		test=extent.createTest("editandectivatenews","This  will perform  edit and activate schedule");
 		Assert.assertTrue(true);
 		LoginAction.execute_Logout(driver);
 
@@ -90,19 +90,19 @@ public class ScheduleManagement extends FirefoxTest {
 
 	@Test(priority=3)
 	@Parameters({"username","password"})
-	public void searchAndDeleteSchedule(String username,String password) throws Exception {
-		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Schedulesheet_name);
-		int rowNum=ExcelUtils.getRowCount(Constants.File_Schedulesheet_name);
-			for(int i1=1;i1<rowNum;i1++)
-			{
-				TitleValue=ExcelUtils.getCellData(i1, 1);
+	public void searchAndDeletenews(String username,String password) throws Exception {
+		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Newssheet_name);
+		int rowNum=ExcelUtils.getRowCount(Constants.File_Newssheet_name);
+		for(int i1=1;i1<rowNum;i1++)
+		{
+			EditTitleValue=ExcelUtils.getCellData(i1, 2);
 
-			}
+		}
 
 		LoginAction.execute_Login( driver,username, password);
-		HomePageAction.navigate_Schedule(driver);
-		ScheduleAction.searchAndDeleteSchedule(driver,EditTitleValue);
-		test=extent.createTest("searchAndDeleteSchedule","This  will perform search and delete schedule test");
+		HomePageAction.navigate_NewsMgmt(driver);
+		NewsManagementAction.searchAndDeletenews(driver,EditTitleValue);
+		test=extent.createTest("searchAndDeletenews","This  will perform search and delete schedule test");
 		Assert.assertTrue(true);
 		LoginAction.execute_Logout(driver);
 
@@ -138,3 +138,5 @@ public class ScheduleManagement extends FirefoxTest {
 
 
 }
+
+

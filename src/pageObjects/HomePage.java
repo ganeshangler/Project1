@@ -79,4 +79,24 @@ public class HomePage {
 		return element;
 
 	}
+	
+	
+	
+	public static WebElement Link_News(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Link_News"));
+
+		return element;
+
+	}
+	public static WebElement Icon_news(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Icon_news"));
+		return element;
+
+	}
 }
