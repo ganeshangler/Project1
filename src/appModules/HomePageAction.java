@@ -52,5 +52,14 @@ public class HomePageAction {
 		Utilis.capture(driver,"NEws");
 		
 	}
+	public static void navigate_SponsorMgmt(WebDriver driver)throws Exception
+	{
+		Utilis.capture(driver,"homepage");
+		HomePage.Icon_Sponsor(driver).click();
+		Thread.sleep(4000);
+		HomePage.Link_Sponsor(driver).click();
+		Utilis.capture(driver,"NEws");
+		
+	}
 }
 

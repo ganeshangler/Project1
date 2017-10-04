@@ -113,6 +113,8 @@ public class NewsManagementAction {
 		WebElement Button_viewOK=NewsPage.Button_ViewOK(driver);
 		utility.Utilis.ExecuteorClick(driver, Button_viewOK);
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
+		NewsPage.Icon_ActivateNews(driver).click();
+		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		WebElement DeleteIcon=NewsPage.Icon_DeleteNews(driver);
 		utility.Utilis.ExecuteorClick(driver, DeleteIcon);
 		driver.switchTo().alert().accept();

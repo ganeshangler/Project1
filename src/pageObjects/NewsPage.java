@@ -113,4 +113,12 @@ public class NewsPage {
 			return element;
 
 		}
+		public static WebElement Icon_ActivateNews(WebDriver driver) throws IOException
+		{
+			parser.RepositoryParser(Constants.path_ObjectRepo);
+			element = driver.findElement(parser.getLocator("News_Activateicon"));
+			return element;
+
+		}
+		
 }

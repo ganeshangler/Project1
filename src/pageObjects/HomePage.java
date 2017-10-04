@@ -99,4 +99,21 @@ public class HomePage {
 		return element;
 
 	}
+	public static WebElement Link_Sponsor(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Sponsor_Link"));
+
+		return element;
+
+	}
+	public static WebElement Icon_Sponsor(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Icon_sponsor"));
+		return element;
+
+	}
 }

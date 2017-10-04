@@ -15,5 +15,6 @@ public class Constants
 	public static final String File_Categorysheet_name="Category";
 	public static final String File_Schedulesheet_name="Schedule";
 	public static final String File_Newssheet_name="News";
+	public static final String File_Sponsorsheet_name="Sponsor";
 }
 

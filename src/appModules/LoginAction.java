@@ -15,7 +15,7 @@ public class LoginAction   {
 
 	public static void execute_Login(WebDriver driver, String username,String password)throws Exception
 	{
-		Utilis.capture(driver,"Login");
+		//Utilis.capture(driver,"Login");
 		LoginPage.TxtBox_username(driver).sendKeys(username);
 		LoginPage.TxtBox_password(driver).sendKeys(password);
 		LoginPage.Btn_Login(driver).click(); 
