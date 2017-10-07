@@ -116,4 +116,20 @@ public class HomePage {
 		return element;
 
 	}
+	public static WebElement Link_Speaker(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Speaker_Link"));
+		return element;
+
+	}
+	public static WebElement Icon_Speaker(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Icon_Speaker"));
+		return element;
+
+	}
 }

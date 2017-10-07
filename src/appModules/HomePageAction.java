@@ -49,7 +49,7 @@ public class HomePageAction {
 		HomePage.Icon_news(driver).click();
 		Thread.sleep(4000);
 		HomePage.Link_News(driver).click();
-		Utilis.capture(driver,"NEws");
+		Utilis.capture(driver,"News");
 		
 	}
 	public static void navigate_SponsorMgmt(WebDriver driver)throws Exception
@@ -58,7 +58,16 @@ public class HomePageAction {
 		HomePage.Icon_Sponsor(driver).click();
 		Thread.sleep(4000);
 		HomePage.Link_Sponsor(driver).click();
-		Utilis.capture(driver,"NEws");
+		Utilis.capture(driver,"Sponsor");
+		
+	}
+	public static void navigate_SpeakerMgmt(WebDriver driver)throws Exception
+	{
+		Utilis.capture(driver,"homepage");
+		HomePage.Icon_Speaker(driver).click();
+		Thread.sleep(4000);
+		HomePage.Link_Speaker(driver).click();
+		Utilis.capture(driver,"Speaker");
 		
 	}
 }

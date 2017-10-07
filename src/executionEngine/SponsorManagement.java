@@ -50,7 +50,7 @@ public class SponsorManagement extends FirefoxTest {
 	@Test(priority=1)
 	@Parameters({"username","password"})
 	public void addsponsor(String username,String password) throws Exception {
-		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Sponsorsheet_name);
+	ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Sponsorsheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Sponsorsheet_name);
 		for(int i1=1;i1<rowNum;i1++)
 		{

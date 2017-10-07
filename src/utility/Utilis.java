@@ -47,6 +47,12 @@ public class Utilis {
 		executor.executeScript("arguments[0].click();", ele);
 		return  driver;
 	}
+	 public static WebDriver  ScrolUp(WebDriver driver) {
+
+			JavascriptExecutor jsx = (JavascriptExecutor)driver;
+			jsx.executeScript("window.scrollBy(450,0)", "");
+			return  driver;
+		}
 }
 
 

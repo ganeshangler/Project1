@@ -137,11 +137,7 @@ public class SponsorManagementAction {
 			}
 			SponsorPage.Icon_DeleteSponsor(driver).click();
 			driver.switchTo().alert().accept();
-			utility.Utilis.capture(driver,"Searchsponsor3");
-			
-			
-			
-			
+			utility.Utilis.capture(driver,"Searchsponsor3");		
 		}
 		
 }
