@@ -74,6 +74,7 @@ public class NewsManagementAction {
 		Thread.sleep(1000);
 		NewsPage.Browse_NewsImgae(driver).sendKeys(s);
 		Thread.sleep(10000);
+		utility.Utilis.ScrollDown(driver);
 		NewsPage.Textbox_NewsDescription(driver).clear();
 		NewsPage.Textbox_NewsDescription(driver).sendKeys(EditDescriptionValue);
 		Thread.sleep(10000);

@@ -70,5 +70,14 @@ public class HomePageAction {
 		Utilis.capture(driver,"Speaker");
 		
 	}
+	public static void navigate_OrganizerMgmt(WebDriver driver)throws Exception
+	{
+		Utilis.capture(driver,"homepage");
+		HomePage.Icon_Organizer(driver).click();
+		Thread.sleep(4000);
+		HomePage.Link_Organizer(driver).click();
+		Utilis.capture(driver,"Speaker");
+		
+	}
 }
 

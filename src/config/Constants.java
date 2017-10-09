@@ -16,5 +16,9 @@ public class Constants
 	public static final String File_Schedulesheet_name="Schedule";
 	public static final String File_Newssheet_name="News";
 	public static final String File_Sponsorsheet_name="Sponsor";
+	public static final String File_Speakersheet_name="Speaker";
+	public static final String File_EditSpeakersheet_name="EditSpeaker";
+	public static final String File_OrganizerSheet_name="Organizer";
+	
 }
 

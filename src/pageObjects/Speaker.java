@@ -157,4 +157,40 @@ public class Speaker {
 		return element;
 
 	}
+	public static WebElement Icon_ViewSpeaker (WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Speaker_ViewIcon"));
+		return element;
+
+	}
+	public static WebElement Textbox_SearchSpeaker (WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Speaker_SearchName"));
+		return element;
+
+	}
+	public static WebElement Icon_ActivateSpeaker (WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Speaker_ActivateIcon"));
+		return element;
+
+	}
+	public static WebElement Icon_DeleteSpeaker (WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Speaker_DeleteIcon"));
+		return element;
+
+	}
+	
+	public static WebElement Button_ViewOK (WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Speaker_ViewOK"));
+		return element;
+
+	}
 }

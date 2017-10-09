@@ -132,4 +132,20 @@ public class HomePage {
 		return element;
 
 	}
+	public static WebElement Link_Organizer(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Organizer_Link"));
+		return element;
+
+	}
+	public static WebElement Icon_Organizer(WebDriver driver) throws IOException
+	{
+
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Icon_Organizer"));
+		return element;
+
+	}
 }
