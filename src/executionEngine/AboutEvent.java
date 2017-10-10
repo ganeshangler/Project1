@@ -25,6 +25,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import utility.Utilis;
 import appModules.AboutEventEditAction;
+import appModules.AboutEventEditAction.TEST_RESULT;
 import appModules.HomePageAction;
 import appModules.LoginAction;
 import config.Constants;
@@ -52,26 +53,34 @@ public class AboutEvent extends FirefoxTest {
 	@Test
 	 @Parameters({"username","password"})
 	public void AboutEventEdit(String username,String password) throws Exception {
-
+		int i1;
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData, Constants.File_AboutEventsheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_AboutEventsheet_name);
-			for(int i1=1;i1<rowNum;i1++)
+			for( i1=1;i1<rowNum;i1++)
 			{
 				FacebookURL=ExcelUtils.getCellData(i1, 0);
 				TwitterURL=ExcelUtils.getCellData(i1, 1);
 				YoutubeURL=ExcelUtils.getCellData(i1, 2);
 				WebSiteURL=ExcelUtils.getCellData(i1, 3);
 
-			}
+		
 			LoginAction.execute_Login(driver,username, password);
 			HomePageAction.navigate_aboutEvent(driver);
-			AboutEventEditAction.Editnews(driver,FacebookURL,TwitterURL ,YoutubeURL,WebSiteURL);
+			TEST_RESULT getResult=AboutEventEditAction.Editnews(driver, FacebookURL, TwitterURL, YoutubeURL, WebSiteURL);
+			if(getResult==TEST_RESULT.RESULT_SUCCESS)
+			{
+				ExcelUtils.setCellData("Pass", "Savesucess", i1, 4, 5);
+			}
+			else
+			{
+				ExcelUtils.setCellData("Fail", "Savefailure", i1, 4, 5);
+			}
 			test=extent.createTest("AboutEventEdit","This  will perform negative test");
 			Assert.assertTrue(true);
 			LoginAction.execute_Logout(driver);
 		}
 	
-
+	}
 	@AfterMethod
 	public void getResult(ITestResult result) 
 	{

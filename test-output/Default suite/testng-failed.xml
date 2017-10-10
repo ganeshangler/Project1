@@ -3,15 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="executionEngine.ScheduleManagement">
+      <class name="executionEngine.SponsorManagement">
         <methods>
           <include name="afterClass"/>
-          <include name="OpenBrowse"/>
-          <include name="startReport"/>
           <include name="teardown"/>
-          <include name="addcategory"/>
+          <include name="OpenBrowse"/>
+          <include name="addsponsor"/>
+          <include name="searchAndDeletesponsor"/>
+          <include name="editandectivatesponsor"/>
+          <include name="startReport"/>
         </methods>
-      </class> <!-- executionEngine.ScheduleManagement -->
+      </class> <!-- executionEngine.SponsorManagement -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

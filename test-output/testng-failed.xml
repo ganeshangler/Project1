@@ -5,14 +5,14 @@
   <parameter name="username" value="eoty2017@showtimemobileapp.com"/>
   <test name="Edit(failed)">
     <classes>
-      <class name="executionEngine.ScheduleManagement">
+      <class name="executionEngine.AboutEvent">
         <methods>
-          <include name="OpenBrowse"/>
-          <include name="startReport"/>
-          <include name="addcategory" invocation-numbers="0"/>
           <include name="getResult"/>
+          <include name="OpenBrowse"/>
+          <include name="AboutEventEdit" invocation-numbers="0"/>
+          <include name="startReport"/>
         </methods>
-      </class> <!-- executionEngine.ScheduleManagement -->
+      </class> <!-- executionEngine.AboutEvent -->
     </classes>
   </test> <!-- Edit(failed) -->
 </suite> <!-- Failed suite [Show time] -->

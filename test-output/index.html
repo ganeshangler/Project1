@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Show_time">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.ScheduleManagement" hash-for-method="addcategory(eoty2017@showtimemobileapp.com, eoty2017)">addcategory(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.AboutEvent" hash-for-method="AboutEventEdit(eoty2017@showtimemobileapp.com, eoty2017)">AboutEventEdit(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Show_time -->
@@ -119,14 +119,14 @@
           <div class="suite-Show_time-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">executionEngine.ScheduleManagement</span>
+              <span class="class-name">executionEngine.AboutEvent</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addcategory(eoty2017@showtimemobileapp.com, eoty2017)">
-                  </a> <!-- addcategory(eoty2017@showtimemobileapp.com, eoty2017) -->
-                  <span class="method-name">addcategory</span>
+                  <a name="AboutEventEdit(eoty2017@showtimemobileapp.com, eoty2017)">
+                  </a> <!-- AboutEventEdit(eoty2017@showtimemobileapp.com, eoty2017) -->
+                  <span class="method-name">AboutEventEdit</span>
                   <span class="parameters">(eoty2017@showtimemobileapp.com, eoty2017)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -146,13 +146,13 @@
   &lt;parameter name=&quot;username&quot; value=&quot;eoty2017@showtimemobileapp.com&quot;/&gt;
   &lt;test name=&quot;Edit&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;executionEngine.ScheduleManagement&quot;&gt;
+      &lt;class name=&quot;executionEngine.AboutEvent&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;addcategory&quot;/&gt;
-          &lt;exclude name=&quot;editandectivatecategory&quot;/&gt;
-          &lt;exclude name=&quot;searchAndDeletecategory&quot;/&gt;
+          &lt;include name=&quot;AboutEventEdit&quot;/&gt;
+          &lt;exclude name=&quot;editandactivateorganizer&quot;/&gt;
+          &lt;exclude name=&quot;searchAndDeleteorganizer&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- executionEngine.ScheduleManagement --&gt;
+      &lt;/class&gt; &lt;!-- executionEngine.AboutEvent --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Edit --&gt;
 &lt;/suite&gt; &lt;!-- Show time --&gt;
@@ -194,14 +194,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addcategory')
-data.setCell(0, 2, 'executionEngine.ScheduleManagement')
-data.setCell(0, 3, 29092);
+data.setCell(0, 1, 'AboutEventEdit')
+data.setCell(0, 2, 'executionEngine.AboutEvent')
+data.setCell(0, 3, 31488);
 window.suiteTableData['Show_time']= { tableData: data, tableDiv: 'times-div-Show_time'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 29 seconds</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-Show_time">
               </div> <!-- times-div-Show_time -->
             </div> <!-- times-div -->
@@ -227,25 +227,31 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">executionEngine.ScheduleManagement</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">executionEngine.AboutEvent</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">OpenBrowse</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">startReport</span>
-                <span class="method-start">7679 ms</span>
+                <span class="method-start">7044 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">addcategory(eoty2017@showtimemobileapp.com, eoty2017)</span>
-                <span class="method-start">7826 ms</span>
+                <span class="method-name">AboutEventEdit(eoty2017@showtimemobileapp.com, eoty2017)</span>
+                <span class="method-start">7147 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">getResult([TestResult name=addcategory status=SUCCESS method=ScheduleManagement.addcategory(java.lang.String, ...)</span>
-                <span class="method-start">36920 ms</span>
+                <span class="method-name">getResult([TestResult name=AboutEventEdit status=SUCCESS method=AboutEvent.AboutEventEdit(java.lang.String, ja...)</span>
+                <span class="method-start">38637 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">afterClass</span>
+                <span class="method-start">38687 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-test after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">38688 ms</span>
+              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

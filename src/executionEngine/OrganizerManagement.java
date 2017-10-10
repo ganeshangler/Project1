@@ -22,7 +22,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import config.Constants;
 
-public class OrganizerManagement extends FirefoxTest{
+public class OrganizerManagement extends ChromeTest{
 
 
 
