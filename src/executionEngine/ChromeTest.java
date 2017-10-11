@@ -22,7 +22,7 @@ public class ChromeTest
 	protected  WebDriver driver;
 	
 
-@AfterClass
+//@AfterClass
 	public static void execute_Logout(WebDriver driver)throws Exception
 	{
 		WebElement LogoutIcon=HomePage.Icon_Logout(driver);
@@ -32,7 +32,7 @@ public class ChromeTest
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 
 	}
-@BeforeClass
+//@BeforeClass
 @Parameters({"username","password"})
 	 public void OpenBrowse(String username,String password) throws Exception
 	 {

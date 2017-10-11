@@ -79,5 +79,15 @@ public class HomePageAction {
 		Utilis.capture(driver,"Speaker");
 		
 	}
+	public static void navigate_Delegates(WebDriver driver)throws Exception
+	{
+		Utilis.capture(driver,"homepage");
+		HomePage.Icon_Delegates(driver).click();
+		Thread.sleep(4000);
+		HomePage.Link_Delegates(driver).click();
+		Utilis.capture(driver,"Speaker");
+		
+	}
+
 }
 
