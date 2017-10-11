@@ -11,11 +11,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import config.Constants;
+import pageObjects.CategoryPage;
 import pageObjects.NewsPage;
 import pageObjects.SchedulePage;
+import utility.Utilis.TEST_RESULT;
 
 public class NewsManagementAction {
-	public static void addnews(WebDriver driver,String Titlevalue,String DescriptionValue) throws IOException, InterruptedException
+	public static TEST_RESULT addnews(WebDriver driver,String Titlevalue,String DescriptionValue) throws IOException, InterruptedException
 	{
 		System.out.println("Inside addnews");
 		NewsPage.Button_SendNews(driver).click();
@@ -47,15 +49,17 @@ public class NewsManagementAction {
 		if(titlevalue.equalsIgnoreCase(Titlevalue))
 		{
 			System.out.println("Testpassed");
+			return TEST_RESULT.RESULT_SUCCESS;
 		}
 		else
 		{
 			System.out.println("Testfailed");
+			return TEST_RESULT.RESULT_FAILURE;
 		}
 
 	}
 
-	public static void editandectivatenews(WebDriver driver,String EditTitleValue,String EditDescriptionValue) throws IOException, InterruptedException
+	public static TEST_RESULT editandectivatenews(WebDriver driver,String EditTitleValue,String EditDescriptionValue) throws IOException, InterruptedException
 	{
 		System.out.println("Inside editnews");
 		NewsPage.Icon_Editnews(driver).click();
@@ -92,16 +96,18 @@ public class NewsManagementAction {
 		if(titlevalue.equalsIgnoreCase(EditTitleValue))
 		{
 			System.out.println("Test passed");
+			return TEST_RESULT.RESULT_SUCCESS;
 		}
 		else
 		{
 			System.out.println("Test failed");
+			return TEST_RESULT.RESULT_FAILURE;
 		}
 
 	}
 
 
-	public static void searchAndDeletenews(WebDriver driver,String EditTitleValue) throws IOException, InterruptedException {
+	public static TEST_RESULT searchAndDeletenews(WebDriver driver,String EditTitleValue) throws IOException, InterruptedException {
 		System.out.println("Inside delete news");
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		NewsPage.Textbox_Titlesearch(driver).sendKeys(EditTitleValue);
@@ -114,12 +120,24 @@ public class NewsManagementAction {
 		WebElement Button_viewOK=NewsPage.Button_ViewOK(driver);
 		utility.Utilis.ExecuteorClick(driver, Button_viewOK);
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
-		NewsPage.Icon_ActivateNews(driver).click();
+		WebElement ActivateIcon=NewsPage.Icon_ActivateNews(driver);
+		utility.Utilis.ExecuteorClick(driver, ActivateIcon);
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
+		if(value.equalsIgnoreCase(EditTitleValue))
+		{
 		WebElement DeleteIcon=NewsPage.Icon_DeleteNews(driver);
 		utility.Utilis.ExecuteorClick(driver, DeleteIcon);
 		driver.switchTo().alert().accept();
 		utility.Utilis.capture(driver, "Deletenews");
+		System.out.println("Testpassed");
+		return TEST_RESULT.RESULT_SUCCESS;
+		}
+		else
+		{
+			CategoryPage.DeleteIcon_Category(driver).click();
+			System.out.println("clicked delete");
+			return TEST_RESULT.RESULT_FAILURE;
+		}
 
 	}
 }

@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.SchedulePage;
 import utility.ExcelUtils;
+import utility.Utilis.TEST_RESULT;
 import appModules.CategoryAction;
 import appModules.HomePageAction;
 import appModules.LoginAction;
@@ -48,43 +49,56 @@ public class ScheduleManagement extends FirefoxTest {
 	} 
 	@Test(priority=1)
 	@Parameters({"username","password"})
-	public void addnews(String username,String password) throws Exception {
-	/*	ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Schedulesheet_name);
+	public void addschedule(String username,String password) throws Exception {
+	    ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Schedulesheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Schedulesheet_name);
 		for(int i1=1;i1<rowNum;i1++)
 		{
 			VenueValue=ExcelUtils.getCellData(i1, 0);
 			TitleValue=ExcelUtils.getCellData(i1, 1);
 			DescriptionValue=ExcelUtils.getCellData(i1, 2);
-		}*/
-		LoginAction.execute_Login( driver,username, password);
+		
 		HomePageAction.navigate_Schedule(driver);
-		ScheduleAction.addschdule(driver,VenueValue,TitleValue,DescriptionValue);
-		/*test=extent.createTest("addschedule","This  will perform  add schedule ");
+		TEST_RESULT testResult=ScheduleAction.addschdule(driver,VenueValue,TitleValue,DescriptionValue);
+		if(testResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "Savesucess", i1, 6, 7);
+		}
+		else
+		{
+			ExcelUtils.setCellData("Fail", "Savefailure", i1, 6, 7);
+		}
+		test=extent.createTest("addschedule","This  will perform  add schedule ");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);*/
 
+		}
 	}
 	@Test(priority=2)
 	@Parameters({"username","password"})
 	public void editandectivateschedule(String username,String password) throws Exception {
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Schedulesheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Schedulesheet_name);
-		for(int i=1;i<rowNum;i++)
-		{
-			for(int i1=1;i1<rowNum;i1++)
+	    for(int i1=1;i1<rowNum;i1++)
 			{
 				EditVenueValue=ExcelUtils.getCellData(i1, 3);
 				EditTitleValue=ExcelUtils.getCellData(i1, 4);
 				EditDescriptionValue=ExcelUtils.getCellData(i1, 5);
-			}
-		}
-		LoginAction.execute_Login( driver,username, password);
+		
+		
+	
 		HomePageAction.navigate_Schedule(driver);
-		ScheduleAction.editAndActivateSchedule(driver,EditVenueValue,EditTitleValue,EditDescriptionValue);
+		TEST_RESULT testResult=ScheduleAction.editAndActivateSchedule(driver,EditVenueValue,EditTitleValue,EditDescriptionValue);
+		if(testResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "editandactivatesucess", i1, 8, 9);
+		}
+		else
+		{
+			ExcelUtils.setCellData("Fail", "editandactivatefailure", i1, 8, 9);
+		}
 		test=extent.createTest("editandectivateschedule","This  will perform  edit and activate schedule");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
+			}
 
 	}
 
@@ -97,15 +111,24 @@ public class ScheduleManagement extends FirefoxTest {
 			{
 				TitleValue=ExcelUtils.getCellData(i1, 1);
 
-			}
+		
 
-		LoginAction.execute_Login( driver,username, password);
+		
 		HomePageAction.navigate_Schedule(driver);
-		ScheduleAction.searchAndDeleteSchedule(driver,EditTitleValue);
+		TEST_RESULT testResult=ScheduleAction.searchAndDeleteSchedule(driver,EditTitleValue);
+		if(testResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "searchAndDeletesucess", i1, 10, 11);
+		}
+		else
+		{
+			ExcelUtils.setCellData("Fail", "searchAndDeletefailure", i1, 10, 11);
+		}
 		test=extent.createTest("searchAndDeleteSchedule","This  will perform search and delete schedule test");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
+	
 
+	}
 	}
 	@AfterMethod
 	public void getResult(ITestResult result) 
@@ -113,12 +136,12 @@ public class ScheduleManagement extends FirefoxTest {
 
 		if (result.getStatus()==ITestResult.SUCCESS)
 		{
-			test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+ "TEst has PAssed",ExtentColor.GREEN));
+			test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+ "Test has PAssed",ExtentColor.GREEN));
 
 		}
 		else if (result.getStatus()==ITestResult.FAILURE)
 		{
-			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+ "TEst has failed",ExtentColor.RED));
+			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+ "Test has failed",ExtentColor.RED));
 			test.fail(result.getThrowable());
 		}
 		else 

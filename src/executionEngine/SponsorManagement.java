@@ -9,6 +9,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import utility.ExcelUtils;
+import utility.Utilis.TEST_RESULT;
+import appModules.CategoryAction;
 import appModules.HomePageAction;
 import appModules.LoginAction;
 import appModules.NewsManagementAction;
@@ -60,15 +62,20 @@ public class SponsorManagement extends FirefoxTest {
 			LinkedInURL=ExcelUtils.getCellData(i1, 3);
 			WebsiteURL=ExcelUtils.getCellData(i1, 4);
 			DescriptionValue=ExcelUtils.getCellData(i1, 5);
-
-		}
-		LoginAction.execute_Login( driver,username,password);
 		HomePageAction.navigate_SponsorMgmt(driver);
 		System.out.println("login sucess");
-		SponsorManagementAction.addsponsor(driver,Sponsorname,SponsorType,TwitterURL,LinkedInURL,WebsiteURL,DescriptionValue);
+		TEST_RESULT testResult=SponsorManagementAction.addsponsor(driver,Sponsorname,SponsorType,TwitterURL,LinkedInURL,WebsiteURL,DescriptionValue);
+		if(testResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "Savesucess", i1, 12, 13);
+		}
+		else
+		{
+			ExcelUtils.setCellData("Fail", "Savefailure", i1, 12, 13);
+		}
 		test=extent.createTest("addsponsor","This  will perform  add schedule ");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
+		}	
 
 	}
 	@Test(priority=2)
@@ -76,8 +83,7 @@ public class SponsorManagement extends FirefoxTest {
 	public void editandectivatesponsor(String username,String password) throws Exception {
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Sponsorsheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Sponsorsheet_name);
-		for(int i=1;i<rowNum;i++)
-		{
+		
 			for(int i1=1;i1<rowNum;i1++)
 			{
 				EditSponsorname=ExcelUtils.getCellData(i1, 6);
@@ -86,15 +92,19 @@ public class SponsorManagement extends FirefoxTest {
 				EditLinkedInURL=ExcelUtils.getCellData(i1, 9);
 				EditWebsiteURL=ExcelUtils.getCellData(i1, 10);
 				EditDescriptionValue=ExcelUtils.getCellData(i1,11);
-
-			}
-		}
-		LoginAction.execute_Login( driver,username, password);
 		HomePageAction.navigate_SponsorMgmt(driver);
-		SponsorManagementAction.editandectivatesponsor(driver,EditSponsorname,EditSponsorType,EditTwitterURL,EditLinkedInURL,EditWebsiteURL,EditDescriptionValue);
-		test=extent.createTest("editandectivatesponsor","This  will perform  edit and activate schedule");
+		TEST_RESULT testResult=SponsorManagementAction.editandectivatesponsor(driver,EditSponsorname,EditSponsorType,EditTwitterURL,EditLinkedInURL,EditWebsiteURL,EditDescriptionValue);
+		if(testResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "editandectivatesucess", i1, 14, 15);
+		}
+		else
+		{
+			ExcelUtils.setCellData("Fail", "editandectivatefailure", i1, 14, 15);
+		}
+		test=extent.createTest("editandectivatesponsor","This  will perform  edit and activate sponsor");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
+			}
 
 	}
 
@@ -108,16 +118,20 @@ public class SponsorManagement extends FirefoxTest {
 		{
 			EditSponsorname=ExcelUtils.getCellData(i1, 6);
 
-		}
-
-		LoginAction.execute_Login( driver,username, password);
 		HomePageAction.navigate_SponsorMgmt(driver);
-		SponsorManagementAction.Searchanddeelete(driver,EditSponsorname);
-
-		test=extent.createTest("searchAndDeletesponsor","This  will perform search and delete schedule test");
+		TEST_RESULT testResult=SponsorManagementAction.Searchanddeelete(driver,EditSponsorname);
+		if(testResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "searchAndDeletesucess", i1, 16, 17);
+		}
+		else
+		{
+			ExcelUtils.setCellData("Fail", "searchAndDeletefailure", i1, 16, 17);
+		}
+		test=extent.createTest("searchAndDeletesponsor","This  will perform search and delete sponsor test");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
-
+		
+		}
 	}
 	@AfterMethod
 	public void getResult(ITestResult result) 

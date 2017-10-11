@@ -16,15 +16,34 @@ import org.testng.annotations.BeforeTest;
 import config.Constants;
 public class Utilis {
 	public static WebDriver driver;
-	
-	 @BeforeClass
-	 public void  OpenBrowse () {
-			
-			driver= new FirefoxDriver();
-			    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			    driver.get(Constants.baseUrl);
 
-		}
+	public  static enum TEST_RESULT 
+	{
+		RESULT_SUCCESS
+		{
+			@Override
+			public String toString()
+			{
+				return "Success";
+			}
+		},	
+		RESULT_FAILURE
+		{
+			@Override
+			public String toString()
+			{
+				return "Failure";
+			}
+		},
+		RESULT_ERROR
+		{
+			@Override
+			public String toString()
+			{
+				return "Error";
+			}
+		}, 
+	}
 	 public static WebDriver  ScrollDown(WebDriver driver) {
 
 			JavascriptExecutor jsx = (JavascriptExecutor)driver;

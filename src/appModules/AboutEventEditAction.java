@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import utility.*;
+import utility.Utilis.TEST_RESULT;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +16,7 @@ import config.Constants;
 import pageObjects.*;
 public class AboutEventEditAction {
 	static ArrayList<String> viewed_Actual=new ArrayList<String>();
-	public enum TEST_RESULT 
+/*	public  static enum TEST_RESULT 
 	{
 		RESULT_SUCCESS
 		{
@@ -41,10 +42,10 @@ public class AboutEventEditAction {
 				return "Error";
 			}
 		}, 
-	}
+	}*/
 	public static TEST_RESULT Editnews(WebDriver driver,String FacebookURL,String TwitterURL ,String YoutubeURL,String WebSiteURL)throws Exception
 	{
-		TEST_RESULT testResult;
+
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		AboutEvent.editIcon(driver).click();
 		WebElement ele = AboutEvent.CancelButton(driver);
@@ -88,7 +89,7 @@ public class AboutEventEditAction {
 		else
 		{
 			System.out.println("failcondition");
-			return TEST_RESULT.RESULT_ERROR;
+			return TEST_RESULT.RESULT_FAILURE;
 		
 		}
 

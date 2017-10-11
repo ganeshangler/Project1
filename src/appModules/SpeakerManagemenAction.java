@@ -9,10 +9,11 @@ import org.openqa.selenium.WebElement;
 import config.Constants;
 import pageObjects.Speaker;
 import pageObjects.SponsorPage;
+import utility.Utilis.TEST_RESULT;
 
 public class SpeakerManagemenAction {
 
-	public static void addsponsor(WebDriver driver,String Firstname,String Lastname, String Designation,String Firm,String TwitterURL,String LinkedinURL,String WebsiteURL,String FacebookURL,String Role,String Industry,String Phoneno,String Email,String Descrption) throws IOException, InterruptedException {
+	public static TEST_RESULT addsponsor(WebDriver driver,String Firstname,String Lastname, String Designation,String Firm,String TwitterURL,String LinkedinURL,String WebsiteURL,String FacebookURL,String Role,String Industry,String Phoneno,String Email,String Descrption) throws IOException, InterruptedException {
 		Speaker.Button_AddSpeaker(driver).click();
 		Thread.sleep(1000);
 		utility.Utilis.ScrollDown(driver);
@@ -46,14 +47,16 @@ public class SpeakerManagemenAction {
 		if(Actual.equalsIgnoreCase(Expected))
 		{
 			System.out.println("Testpassed");
+			return TEST_RESULT.RESULT_SUCCESS;
 		}
 		else
 		{
 			System.out.println("Testfailed");
+			return TEST_RESULT.RESULT_FAILURE;
 		}
 
 	}
-	public static void editandectivatespeaker(WebDriver driver,String EditFirstname,String EditLastname,String EditDesignation,String EditFirm,String EditTwitterURL,String EditLinkedinURL,String EditWebsiteURL,String EditFacebookURL,String EditRole,String EditIndustry,String EditPhoneno,String EditEmail,String EditDescrption) throws IOException, InterruptedException
+	public static TEST_RESULT editandectivatespeaker(WebDriver driver,String EditFirstname,String EditLastname,String EditDesignation,String EditFirm,String EditTwitterURL,String EditLinkedinURL,String EditWebsiteURL,String EditFacebookURL,String EditRole,String EditIndustry,String EditPhoneno,String EditEmail,String EditDescrption) throws IOException, InterruptedException
 	{
 
 		Speaker.Icon_EditSpeaker(driver).click();
@@ -103,14 +106,16 @@ public class SpeakerManagemenAction {
 		if(Actual.equalsIgnoreCase(Expected))
 		{
 			System.out.println("Testpassed");
+			return TEST_RESULT.RESULT_SUCCESS;
 		}
 		else
 		{
 			System.out.println("Testfailed");
+			return TEST_RESULT.RESULT_FAILURE;
 		}
 
 	}
-	public static void Searchanddeelete(WebDriver driver,String EditFirstname,String EditLastname)throws IOException,InterruptedException
+	public static TEST_RESULT Searchanddeelete(WebDriver driver,String EditFirstname,String EditLastname)throws IOException,InterruptedException
 	{
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		System.out.println("Insidesearch");
@@ -125,15 +130,21 @@ public class SpeakerManagemenAction {
 		
 		if(actual.equalsIgnoreCase(Expected))
 		{
+			SponsorPage.Icon_DeleteSponsor(driver).click();
+			driver.switchTo().alert().accept();
+			utility.Utilis.capture(driver,"Searchspeaker3");
 			System.out.println("Testpassed");
+			return TEST_RESULT.RESULT_SUCCESS;
 		}
 		else
 		{
+			SponsorPage.Icon_DeleteSponsor(driver).click();
+			driver.switchTo().alert().accept();
+			utility.Utilis.capture(driver,"Searchspeaker3");
 			System.out.println("Testfailed");
+			return TEST_RESULT.RESULT_FAILURE;
 		}
-		SponsorPage.Icon_DeleteSponsor(driver).click();
-		driver.switchTo().alert().accept();
-		utility.Utilis.capture(driver,"Searchspeaker3");		
+				
 	}
 
 

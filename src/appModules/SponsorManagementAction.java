@@ -11,9 +11,10 @@ import org.openqa.selenium.support.ui.Select;
 import config.Constants;
 import pageObjects.NewsPage;
 import pageObjects.SponsorPage;
+import utility.Utilis.TEST_RESULT;
 
 public class SponsorManagementAction {
-	public static void addsponsor(WebDriver driver,String Sponsorname,String SponsorType,String TwitterURL,String LinkedInURL,String WebsiteURL,String DescriptionValue) throws IOException, InterruptedException
+	public static TEST_RESULT addsponsor(WebDriver driver,String Sponsorname,String SponsorType,String TwitterURL,String LinkedInURL,String WebsiteURL,String DescriptionValue) throws IOException, InterruptedException
 	{	
 		System.out.println("Inside addsponsor");
 		WebElement Addsponsor =SponsorPage.Button_AddSponsor(driver);
@@ -54,13 +55,15 @@ public class SponsorManagementAction {
 		if(actual.equalsIgnoreCase(Sponsorname))
 		{
 			System.out.println("Testpassed");
+			return TEST_RESULT.RESULT_SUCCESS;
 		}
 		else
 		{
 			System.out.println("Testfailed");
+			return TEST_RESULT.RESULT_FAILURE;
 		}
 	}
-	public static void editandectivatesponsor(WebDriver driver,String EditSponsorname,String EditSponsorType, String EditTwitterURL,String EditLinkedInURL,String EditWebsiteURL,String EditDescriptionValue) throws IOException, InterruptedException
+	public static TEST_RESULT editandectivatesponsor(WebDriver driver,String EditSponsorname,String EditSponsorType, String EditTwitterURL,String EditLinkedInURL,String EditWebsiteURL,String EditDescriptionValue) throws IOException, InterruptedException
 	{	
 		SponsorPage.Icon_EditSponsor(driver).click();
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
@@ -110,13 +113,15 @@ public class SponsorManagementAction {
 		if(actual.equalsIgnoreCase(EditSponsorname))
 		{
 			System.out.println("Testpassed");
+			return TEST_RESULT.RESULT_SUCCESS;
 		}
 		else
 		{
 			System.out.println("Testfailed");
+			return TEST_RESULT.RESULT_FAILURE;
 		}
 	}
-		public static void Searchanddeelete(WebDriver driver,String EditSponsorname) throws IOException, InterruptedException
+		public static TEST_RESULT Searchanddeelete(WebDriver driver,String EditSponsorname) throws IOException, InterruptedException
 		{
 			driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		System.out.println("Insidesearch");
@@ -129,15 +134,21 @@ public class SponsorManagementAction {
 			String actual=SponsorPage.GridText_SponsorName(driver).getText();	
 			if(actual.equalsIgnoreCase(EditSponsorname))
 			{
+				SponsorPage.Icon_DeleteSponsor(driver).click();
+				driver.switchTo().alert().accept();
+				utility.Utilis.capture(driver,"Searchsponsor3");	
 				System.out.println("Testpassed");
+				return TEST_RESULT.RESULT_SUCCESS;
 			}
 			else
 			{
+				SponsorPage.Icon_DeleteSponsor(driver).click();
+				driver.switchTo().alert().accept();
+				utility.Utilis.capture(driver,"Searchsponsor3");
 				System.out.println("Testfailed");
+				return TEST_RESULT.RESULT_FAILURE;
 			}
-			SponsorPage.Icon_DeleteSponsor(driver).click();
-			driver.switchTo().alert().accept();
-			utility.Utilis.capture(driver,"Searchsponsor3");		
+				
 		}
 		
 }

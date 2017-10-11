@@ -12,7 +12,8 @@ import org.testng.annotations.Test;
 
 import pageObjects.NewsPage;
 import pageObjects.SchedulePage;
-import utility.ExcelUtils;
+import utility.*;
+import utility.Utilis.TEST_RESULT;
 import appModules.*;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -26,7 +27,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import config.Constants;
 
-public class NewsManagement extends ChromeTest {
+public class NewsManagement extends FirefoxTest {
 	String Titlevalue,DescriptionValue,EditTitleValue,EditDescriptionValue;
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
@@ -55,37 +56,46 @@ public class NewsManagement extends ChromeTest {
 		{
 			Titlevalue=ExcelUtils.getCellData(i1, 0);
 			DescriptionValue=ExcelUtils.getCellData(i1, 1);
-	
-		}
-		LoginAction.execute_Login( driver,username, password);
-		HomePageAction.navigate_NewsMgmt(driver);
-		NewsManagementAction.addnews(driver,Titlevalue,DescriptionValue);
-		test=extent.createTest("addnews","This  will perform  add schedule ");
-		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
+			HomePageAction.navigate_NewsMgmt(driver);
+			TEST_RESULT testResult=NewsManagementAction.addnews(driver,Titlevalue,DescriptionValue);
 
+			if(testResult==TEST_RESULT.RESULT_SUCCESS)
+			{
+				ExcelUtils.setCellData("Pass", "Savesucess", i1, 4, 5);
+			}
+			else
+			{
+				ExcelUtils.setCellData("Fail", "Savefailure", i1, 4, 5);
+			}
+			test=extent.createTest("addnews","This  will perform  add news ");
+			Assert.assertTrue(true);
+
+		}
 	}
 	@Test(priority=2)
 	@Parameters({"username","password"})
 	public void editandectivatenews(String username,String password) throws Exception {
-	   ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Newssheet_name);
+		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Newssheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Newssheet_name);
-		for(int i=1;i<rowNum;i++)
+
+		for(int i1=1;i1<rowNum;i1++)
 		{
-			for(int i1=1;i1<rowNum;i1++)
+			EditDescriptionValue=ExcelUtils.getCellData(i1, 3);
+			EditTitleValue=ExcelUtils.getCellData(i1, 2);
+			HomePageAction.navigate_NewsMgmt(driver);
+			TEST_RESULT testResult=NewsManagementAction.editandectivatenews(driver,EditTitleValue,EditDescriptionValue);
+			if(testResult==TEST_RESULT.RESULT_SUCCESS)
 			{
-				EditDescriptionValue=ExcelUtils.getCellData(i1, 3);
-				EditTitleValue=ExcelUtils.getCellData(i1, 2);
-
+				ExcelUtils.setCellData("Pass", "editandectivatesucess", i1, 6, 7);
 			}
-		}
-		LoginAction.execute_Login( driver,username, password);
-		HomePageAction.navigate_NewsMgmt(driver);
-		NewsManagementAction.editandectivatenews(driver,EditTitleValue,EditDescriptionValue);
-		test=extent.createTest("editandectivatenews","This  will perform  edit and activate schedule");
-		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
+			else
+			{
+				ExcelUtils.setCellData("Fail", "editandectivatefailure", i1, 6, 7);
+			}
+			test=extent.createTest("editandectivatenews","This  will perform  edit and activate news");
+			Assert.assertTrue(true);
 
+		}
 	}
 
 	@Test(priority=3)
@@ -97,14 +107,22 @@ public class NewsManagement extends ChromeTest {
 		{
 			EditTitleValue=ExcelUtils.getCellData(i1, 2);
 
-		}
 
-		LoginAction.execute_Login( driver,username, password);
-		HomePageAction.navigate_NewsMgmt(driver);
-		NewsManagementAction.searchAndDeletenews(driver,EditTitleValue);
-		test=extent.createTest("searchAndDeletenews","This  will perform search and delete schedule test");
-		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
+
+
+			HomePageAction.navigate_NewsMgmt(driver);
+			TEST_RESULT testResult=NewsManagementAction.searchAndDeletenews(driver,EditTitleValue);
+			if(testResult==TEST_RESULT.RESULT_SUCCESS)
+			{
+				ExcelUtils.setCellData("Pass", "searchAndDeletesucess", i1, 8, 9);
+			}
+			else
+			{
+				ExcelUtils.setCellData("Fail", "searchAndDeletefailure", i1, 8, 9);
+			}
+			test=extent.createTest("searchAndDeletenews","This  will perform search and delete news test");
+			Assert.assertTrue(true);
+		}	
 
 	}
 	@AfterMethod
@@ -126,8 +144,6 @@ public class NewsManagement extends ChromeTest {
 			test.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+ "Test has skipped",ExtentColor.YELLOW));
 			test.skip(result.getThrowable());
 		}
-
-
 	}
 	@AfterTest()
 	public void teardown()

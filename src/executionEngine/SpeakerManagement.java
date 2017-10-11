@@ -9,9 +9,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import utility.ExcelUtils;
+import utility.Utilis.TEST_RESULT;
 import appModules.HomePageAction;
 import appModules.LoginAction;
 import appModules.NewsManagementAction;
+import appModules.OrganizerManagementAction;
 import appModules.SpeakerManagemenAction;
 import appModules.SponsorManagementAction;
 import config.Constants;
@@ -37,7 +39,7 @@ public class SpeakerManagement extends FirefoxTest {
 
 	public void startReport()
 	{
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/MyownReport.html");
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/SpeakerManagement.html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("OS", "windows");
@@ -69,14 +71,20 @@ public class SpeakerManagement extends FirefoxTest {
 			Email=ExcelUtils.getCellData(i1, 11);
 			Descrption=ExcelUtils.getCellData(i1, 12);
 
-		}
-		LoginAction.execute_Login( driver,username,password);
 		HomePageAction.navigate_SpeakerMgmt(driver);			
-		SpeakerManagemenAction.addsponsor(driver,Firstname,Lastname,Designation,Firm,TwitterURL,LinkedinURL,WebsiteURL,FacebookURL,Role,Industry,Phoneno,Email,Descrption);
+		TEST_RESULT testResult=SpeakerManagemenAction.addsponsor(driver,Firstname,Lastname,Designation,Firm,TwitterURL,LinkedinURL,WebsiteURL,FacebookURL,Role,Industry,Phoneno,Email,Descrption);
+		if(testResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "Savesucess", i1, 13, 14);
+		}
+		else
+		{
+			ExcelUtils.setCellData("Fail", "Savefailure", i1, 13, 14);
+		}
 		test=extent.createTest("addspeaker","This will perform add speaker");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
-
+	
+		}
 	}
 	@Test(priority=2)
 	@Parameters({"username","password"})
@@ -98,19 +106,22 @@ public class SpeakerManagement extends FirefoxTest {
 			EditPhoneno=ExcelUtils.getCellData(i1, 10);
 			EditEmail=ExcelUtils.getCellData(i1, 11);
 			EditDescrption=ExcelUtils.getCellData(i1, 12);
-
-		}
-
-		LoginAction.execute_Login( driver,username, password);
 		HomePageAction.navigate_SpeakerMgmt(driver);
-		SpeakerManagemenAction.editandectivatespeaker(driver,EditFirstname,EditLastname,EditDesignation,EditFirm,EditTwitterURL,EditLinkedinURL,EditWebsiteURL,EditFacebookURL,EditRole,EditIndustry,EditPhoneno,EditEmail,EditDescrption);
+		TEST_RESULT testResult=SpeakerManagemenAction.editandectivatespeaker(driver,EditFirstname,EditLastname,EditDesignation,EditFirm,EditTwitterURL,EditLinkedinURL,EditWebsiteURL,EditFacebookURL,EditRole,EditIndustry,EditPhoneno,EditEmail,EditDescrption);
+		if(testResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "editandectivatesucess", i1, 13, 14);
+		}
+		else
+		{
+			ExcelUtils.setCellData("Fail", "editandectivatefailure", i1, 13, 14);
+		}
 		Assert.assertTrue(true);
 		test=extent.createTest("editandectivatespeaker","This  will perform  edit and activate schedule");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
 
 	}
-
+	}
 
 	@Test(priority=3)
 	@Parameters({"username","password"})
@@ -121,16 +132,19 @@ public class SpeakerManagement extends FirefoxTest {
 		{
 			EditFirstname=ExcelUtils.getCellData(i1, 0);
 			EditLastname=ExcelUtils.getCellData(i1, 1);
-
-		}
-
-		LoginAction.execute_Login( driver,username, password);
 		HomePageAction.navigate_SpeakerMgmt(driver);
-		SpeakerManagemenAction.Searchanddeelete(driver,EditFirstname,EditLastname);
+		TEST_RESULT testResult=SpeakerManagemenAction.Searchanddeelete(driver,EditFirstname,EditLastname);
+		if(testResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "searchAndDelete", i1, 15, 16);
+		}
+		else
+		{
+			ExcelUtils.setCellData("Fail", "searchAndDelete", i1, 15, 16);
+		}
 		test=extent.createTest("searchAndDeletespeaker","This  will perform search and delete schedule test");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
-
+		}
 	}
 	@AfterMethod
 	public void getResult(ITestResult result) 
@@ -138,12 +152,12 @@ public class SpeakerManagement extends FirefoxTest {
 
 		if (result.getStatus()==ITestResult.SUCCESS)
 		{
-			test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+ "TEst has PAssed",ExtentColor.GREEN));
+			test.log(Status.PASS, MarkupHelper.createLabel(result.getName()+ "Test has PAssed",ExtentColor.GREEN));
 
 		}
 		else if (result.getStatus()==ITestResult.FAILURE)
 		{
-			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+ "TEst has failed",ExtentColor.RED));
+			test.log(Status.FAIL, MarkupHelper.createLabel(result.getName()+ "Test has failed",ExtentColor.RED));
 			test.fail(result.getThrowable());
 		}
 		else 

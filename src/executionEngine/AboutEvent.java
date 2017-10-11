@@ -2,6 +2,7 @@ package executionEngine;
 import java.sql.Driver;
 
 import utility.*;
+import utility.Utilis.TEST_RESULT;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +26,6 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import utility.Utilis;
 import appModules.AboutEventEditAction;
-import appModules.AboutEventEditAction.TEST_RESULT;
 import appModules.HomePageAction;
 import appModules.LoginAction;
 import config.Constants;
@@ -61,10 +61,7 @@ public class AboutEvent extends FirefoxTest {
 				FacebookURL=ExcelUtils.getCellData(i1, 0);
 				TwitterURL=ExcelUtils.getCellData(i1, 1);
 				YoutubeURL=ExcelUtils.getCellData(i1, 2);
-				WebSiteURL=ExcelUtils.getCellData(i1, 3);
-
-		
-			LoginAction.execute_Login(driver,username, password);
+				WebSiteURL=ExcelUtils.getCellData(i1, 3);	
 			HomePageAction.navigate_aboutEvent(driver);
 			TEST_RESULT getResult=AboutEventEditAction.Editnews(driver, FacebookURL, TwitterURL, YoutubeURL, WebSiteURL);
 			if(getResult==TEST_RESULT.RESULT_SUCCESS)
@@ -77,7 +74,6 @@ public class AboutEvent extends FirefoxTest {
 			}
 			test=extent.createTest("AboutEventEdit","This  will perform negative test");
 			Assert.assertTrue(true);
-			LoginAction.execute_Logout(driver);
 		}
 	
 	}
@@ -101,7 +97,7 @@ public class AboutEvent extends FirefoxTest {
 			test.skip(result.getThrowable());
 		}
 
-		driver.close();
+		//driver.close();
 	}
 	@AfterTest()
 	public void teardown()

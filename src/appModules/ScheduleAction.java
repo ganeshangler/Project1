@@ -4,9 +4,11 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -19,8 +21,9 @@ import config.Constants;
 import executionEngine.FirefoxTest;
 import pageObjects.*;
 import utility.Utilis;
+import utility.Utilis.TEST_RESULT;
 public class ScheduleAction  {
-	public static void addschdule(WebDriver driver,String VenueValue,String TitleValue,String DescriptionValue) throws IOException, InterruptedException
+	public static TEST_RESULT addschdule(WebDriver driver,String VenueValue,String TitleValue,String DescriptionValue) throws IOException, InterruptedException
 	{
 
 		SchedulePage.Button_Add(driver).click();
@@ -58,21 +61,27 @@ public class ScheduleAction  {
 		utility.Utilis.capture(driver, "AddSchedulePage4");
 		SchedulePage.Button_ScheduleSave(driver).click();
 		driver.switchTo().alert().accept();
-		driver.switchTo().alert().accept();
+		new WebDriverWait(driver, 40)
+        .ignoring(NoAlertPresentException.class)
+        .until(ExpectedConditions.alertIsPresent());
+		Alert al = driver.switchTo().alert();
+		al.accept();
 		utility.Utilis.capture(driver, "AddSchedulePage5");
 		String actual=SchedulePage.GridValue_Title(driver).getText();
 		if(actual.equalsIgnoreCase(TitleValue))
 		{
 			System.out.println("Test has passed");
+			return TEST_RESULT.RESULT_SUCCESS;
 		}
 		else 
 		{
 			System.out.println("Test has failed");
+			return TEST_RESULT.RESULT_FAILURE;
 		}
 
 	}
 
-	public static void editAndActivateSchedule(WebDriver driver,String EditVenueValue,String EditTitleValue,String EditDescriptionValue) throws IOException, InterruptedException {
+	public static TEST_RESULT editAndActivateSchedule(WebDriver driver,String EditVenueValue,String EditTitleValue,String EditDescriptionValue) throws IOException, InterruptedException {
 		//Clearing values
 		SchedulePage.Icon_ScheduleEit(driver).click();
 		utility.Utilis.ScrollDown(driver);
@@ -116,15 +125,17 @@ public class ScheduleAction  {
 		if(actual.equalsIgnoreCase(EditTitleValue))
 		{
 			System.out.println("Test has passed");
+			return TEST_RESULT.RESULT_SUCCESS;
 		}
 		else 
 		{
 			System.out.println("Test has failed");
+			return TEST_RESULT.RESULT_FAILURE;
 		}	
 
 	}
 
-	public static void searchAndDeleteSchedule(WebDriver driver, String EditTitleValue) throws IOException, InterruptedException {
+	public static TEST_RESULT searchAndDeleteSchedule(WebDriver driver, String EditTitleValue) throws IOException, InterruptedException {
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		SchedulePage.Textbox_SearchValue(driver).sendKeys(EditTitleValue);
 		utility.Utilis.capture(driver, "SearchSchedulePage1");
@@ -135,12 +146,23 @@ public class ScheduleAction  {
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		WebElement Button_viewOK=SchedulePage.Button_ViewOK(driver);
 		utility.Utilis.ExecuteorClick(driver, Button_viewOK);
-        driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
-		WebElement DeleteIcon=SchedulePage.Icon_DeleteSchedule(driver);
-		utility.Utilis.ExecuteorClick(driver, DeleteIcon);
-		driver.switchTo().alert().accept();
-		utility.Utilis.capture(driver, "DeleteSchedulePage2");
-
+		if(value.equalsIgnoreCase(EditTitleValue))
+		{
+			driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
+			WebElement DeleteIcon=SchedulePage.Icon_DeleteSchedule(driver);
+			utility.Utilis.ExecuteorClick(driver, DeleteIcon);
+			driver.switchTo().alert().accept();
+			utility.Utilis.capture(driver, "DeleteSchedulePage2");
+			System.out.println("Testpassed");
+			return TEST_RESULT.RESULT_SUCCESS;
+		}
+		else
+		{
+			CategoryPage.DeleteIcon_Category(driver).click();
+			System.out.println("clicked delete");
+			return TEST_RESULT.RESULT_FAILURE;
+		}
 	}
 }
+
 

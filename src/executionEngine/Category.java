@@ -1,5 +1,6 @@
 package executionEngine;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -9,8 +10,10 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import pageObjects.CategoryPage;
+import pageObjects.HomePage;
 import utility.ExcelUtils;
 import utility.Utilis;
+import utility.Utilis.TEST_RESULT;
 import appModules.CategoryAction;
 import appModules.HomePageAction;
 import appModules.LoginAction;
@@ -31,6 +34,7 @@ public class Category extends FirefoxTest {
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
 	ExtentTest test;
+	int i1;
 	@BeforeTest
 
 	public void startReport()
@@ -48,23 +52,31 @@ public class Category extends FirefoxTest {
 	} 
 	@Test(priority=1)
 	@Parameters({"username","password"})
-	public void addcategory(String username,String password) throws Exception {
+
+	public  void addcategory() throws Exception {
+		int i1;
 		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Categorysheet_name);
 		int rowNum=ExcelUtils.getRowCount(Constants.File_Categorysheet_name);
 
-		for(int i1=1;i1<rowNum;i1++)
+		for( i1=1;i1<rowNum;i1++)
 		{
 			categoryValue=ExcelUtils.getCellData(i1, 0);
+		
+		HomePageAction.navigate_Category(driver);	
+		TEST_RESULT testResult=CategoryAction.addcategorymaster(driver, categoryValue);
+		if(testResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "Savesucess", i1, 2, 3);
 		}
-
-
-		LoginAction.execute_Login( driver,username, password);
-		HomePageAction.navigate_Category(driver);
-		CategoryAction.addcategory(driver,categoryValue);
+		else
+		{
+			ExcelUtils.setCellData("Fail", "Savefailure", i1, 2, 3);
+		}
+		test=extent.createTest("AboutEventEdit","This  will perform negative test");
+		Assert.assertTrue(true);
 		test=extent.createTest("addcategory","This  will perform  add category ");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
-
+		}
 	}
 	@Test(priority=2)
 	@Parameters({"username","password"})
@@ -78,12 +90,20 @@ public class Category extends FirefoxTest {
 		}
 
 
-		LoginAction.execute_Login( driver,username, password);
+
 		HomePageAction.navigate_Category(driver);
-		CategoryAction.editAndActivateCategory(driver,editCategoryValue);
+		TEST_RESULT getResult=CategoryAction.editAndActivateCategory(driver,editCategoryValue);
+		if(getResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "editsucess", i1, 4, 5);
+		}
+		else
+		{
+			ExcelUtils.setCellData("Fail", "editfailure", i1, 4, 5);
+		}
 		test=extent.createTest("editandectivatecategory","This  will perform  edit and activate category");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
+	
 
 	}
 
@@ -96,16 +116,21 @@ public class Category extends FirefoxTest {
 		for(int i1=1;i1<rowNum;i1++)
 		{
 			editCategoryValue=ExcelUtils.getCellData(i1, 1);
-		}
-
-
-		LoginAction.execute_Login( driver,username, password);
+		
 		HomePageAction.navigate_Category(driver);
-		CategoryAction.searchAndDeletecategory(driver,editCategoryValue);
+		TEST_RESULT getResult=CategoryAction.searchAndDeletecategory(driver,editCategoryValue);
+		if(getResult==TEST_RESULT.RESULT_SUCCESS)
+		{
+			ExcelUtils.setCellData("Pass", "Searchdeletesucess", i1, 6, 7);
+		}
+		else
+		{
+			ExcelUtils.setCellData("Fail", "Searchdeletesucess", i1, 6, 7);
+		}
 		test=extent.createTest("searchAndDeletecategory","This  will perform search and delete category test");
 		Assert.assertTrue(true);
-		LoginAction.execute_Logout(driver);
 
+		}
 	}
 	@AfterMethod
 	public void getResult(ITestResult result) 
@@ -126,8 +151,6 @@ public class Category extends FirefoxTest {
 			test.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+ "Test has skipped",ExtentColor.YELLOW));
 			test.skip(result.getThrowable());
 		}
-
-		//driver.close();
 	}
 	@AfterTest()
 	public void teardown()

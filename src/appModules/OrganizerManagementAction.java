@@ -8,8 +8,9 @@ import org.openqa.selenium.WebElement;
 
 import config.Constants;
 import pageObjects.*;
+import utility.Utilis.TEST_RESULT;
 public class OrganizerManagementAction {
-	public static void addorganizer(WebDriver driver, String OrgaizernameValue,String DescriptionValue,String FacebookURLValue,String TwitterURLValue,String WebsiteURLValue) throws IOException, InterruptedException
+	public static TEST_RESULT addorganizer(WebDriver driver, String OrgaizernameValue,String DescriptionValue,String FacebookURLValue,String TwitterURLValue,String WebsiteURLValue) throws IOException, InterruptedException
 	{
 		Organizer.Button_Add(driver).click();
 		Thread.sleep(2000);
@@ -40,13 +41,16 @@ public class OrganizerManagementAction {
 		if(actual.equalsIgnoreCase(OrgaizernameValue))
 		{
 			System.out.println("Testpassed");
+			return TEST_RESULT.RESULT_SUCCESS;
 		}
 		else
 		{
 			System.out.println("Testfailed");
+			return TEST_RESULT.RESULT_FAILURE;
 		}
+		
 	}
-	public static void editandactivateorganizer(WebDriver driver,String EditOrgaizernameValue,String EditDescriptionValue,String EditFacebookURLValue,String EditTwitterURLValue,String EditWebsiteURLValue) throws IOException, InterruptedException
+	public static TEST_RESULT editandactivateorganizer(WebDriver driver,String EditOrgaizernameValue,String EditDescriptionValue,String EditFacebookURLValue,String EditTwitterURLValue,String EditWebsiteURLValue) throws IOException, InterruptedException
 	{
 		Organizer.Icon_EditOrganizer(driver).click();
 		Thread.sleep(2000);
@@ -83,18 +87,21 @@ public class OrganizerManagementAction {
 		Thread.sleep(3000);
 		String actual=Organizer.GridText_OrganizerName(driver).getText();
 		utility.Utilis.capture(driver,"Editorganizer3");
+		Organizer.Icon_ActivateOrganizer(driver).click();
 		if(actual.equalsIgnoreCase(EditOrgaizernameValue))
 		{
 			System.out.println("Testpassed");
+			return TEST_RESULT.RESULT_SUCCESS;
 		}
 		else
 		{
 			System.out.println("Testfailed");
+			return TEST_RESULT.RESULT_FAILURE;
 		}
-		Organizer.Icon_ActivateOrganizer(driver).click();
+	
 	}
 
-	public static void searchAndDeleteorganizer(WebDriver driver, String EditOrgaizernameValue) throws IOException, InterruptedException {
+	public static TEST_RESULT searchAndDeleteorganizer(WebDriver driver, String EditOrgaizernameValue) throws IOException, InterruptedException {
 
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		Organizer.Textbox_SearchText(driver).sendKeys(EditOrgaizernameValue);
@@ -109,10 +116,25 @@ public class OrganizerManagementAction {
 		WebElement Button_viewOK=Organizer.Button_ViewOK(driver);
 		utility.Utilis.ExecuteorClick(driver, Button_viewOK);
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
+		if(value.equalsIgnoreCase(EditOrgaizernameValue))
+		{
 		WebElement DeleteIcon=Organizer.Icon_DeleteOrganizer(driver);
 		utility.Utilis.ExecuteorClick(driver, DeleteIcon);
 		driver.switchTo().alert().accept();
 		utility.Utilis.capture(driver, "Deleteorganizer");
-
+		utility.Utilis.capture(driver, "Deletenews");
+		System.out.println("Testpassed");
+		return TEST_RESULT.RESULT_SUCCESS;
+		}
+		else
+		{
+			WebElement DeleteIcon=Organizer.Icon_DeleteOrganizer(driver);
+			utility.Utilis.ExecuteorClick(driver, DeleteIcon);
+			driver.switchTo().alert().accept();
+			utility.Utilis.capture(driver, "Deleteorganizer");
+		    System.out.println("TEST FAILED");
+			return TEST_RESULT.RESULT_FAILURE;
+		}
+			
 	}
 }
