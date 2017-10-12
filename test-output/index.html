@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Show_time">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.AboutEvent" hash-for-method="AboutEventEdit(eoty2017@showtimemobileapp.com, eoty2017)">AboutEventEdit(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.DelegatesTest" hash-for-method="adddelegates(eoty2017@showtimemobileapp.com, eoty2017)">adddelegates(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Show_time -->
@@ -119,14 +119,14 @@
           <div class="suite-Show_time-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">executionEngine.AboutEvent</span>
+              <span class="class-name">executionEngine.DelegatesTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AboutEventEdit(eoty2017@showtimemobileapp.com, eoty2017)">
-                  </a> <!-- AboutEventEdit(eoty2017@showtimemobileapp.com, eoty2017) -->
-                  <span class="method-name">AboutEventEdit</span>
+                  <a name="adddelegates(eoty2017@showtimemobileapp.com, eoty2017)">
+                  </a> <!-- adddelegates(eoty2017@showtimemobileapp.com, eoty2017) -->
+                  <span class="method-name">adddelegates</span>
                   <span class="parameters">(eoty2017@showtimemobileapp.com, eoty2017)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -141,18 +141,23 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Show time&quot;&gt;
+&lt;suite name=&quot;Show time&quot;&gt;
   &lt;parameter name=&quot;password&quot; value=&quot;eoty2017&quot;/&gt;
   &lt;parameter name=&quot;username&quot; value=&quot;eoty2017@showtimemobileapp.com&quot;/&gt;
   &lt;test name=&quot;Edit&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;executionEngine.AboutEvent&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;AboutEventEdit&quot;/&gt;
-          &lt;exclude name=&quot;editandactivateorganizer&quot;/&gt;
-          &lt;exclude name=&quot;searchAndDeleteorganizer&quot;/&gt;
+          &lt;exclude name=&quot;AboutEventEdit&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- executionEngine.AboutEvent --&gt;
+      &lt;class name=&quot;executionEngine.DelegatesTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;adddelegates&quot;/&gt;
+          &lt;include name=&quot;editandectivatecategory&quot;/&gt;
+          &lt;include name=&quot;searchAndDeletecategory&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- executionEngine.DelegatesTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Edit --&gt;
 &lt;/suite&gt; &lt;!-- Show time --&gt;
@@ -166,7 +171,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Edit (1 class)</span>
+                <span class="test-name">Edit (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,14 +199,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'AboutEventEdit')
-data.setCell(0, 2, 'executionEngine.AboutEvent')
-data.setCell(0, 3, 31488);
+data.setCell(0, 1, 'adddelegates')
+data.setCell(0, 2, 'executionEngine.DelegatesTest')
+data.setCell(0, 3, 21217);
 window.suiteTableData['Show_time']= { tableData: data, tableDiv: 'times-div-Show_time'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 31 seconds</span>
+              <span class="suite-total-time">Total running time: 21 seconds</span>
               <div id="times-div-Show_time">
               </div> <!-- times-div-Show_time -->
             </div> <!-- times-div -->
@@ -216,9 +221,25 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Show_time" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">executionEngine.DelegatesTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">editandectivatespeaker</span>
+                <br/>
+                <span class="ignored-method-name">searchAndDeletespeaker</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">executionEngine.AboutEvent</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AboutEventEdit</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Show_time" class="panel">
@@ -229,29 +250,30 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">executionEngine.AboutEvent</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">OpenBrowse</span>
+                <span class="method-name">startReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">executionEngine.DelegatesTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">startReport</span>
-                <span class="method-start">7044 ms</span>
+                <span class="method-start">187 ms</span>
               </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">OpenBrowse(eoty2017@showtimemobileapp.com, eoty2017)</span>
+                <span class="method-start">203 ms</span>
+              </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">AboutEventEdit(eoty2017@showtimemobileapp.com, eoty2017)</span>
-                <span class="method-start">7147 ms</span>
+                <span class="method-name">adddelegates(eoty2017@showtimemobileapp.com, eoty2017)</span>
+                <span class="method-start">7172 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">getResult([TestResult name=AboutEventEdit status=SUCCESS method=AboutEvent.AboutEventEdit(java.lang.String, ja...)</span>
-                <span class="method-start">38637 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">getResult([TestResult name=adddelegates status=SUCCESS method=DelegatesTest.adddelegates(java.lang.String, jav...)</span>
+                <span class="method-start">28394 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">38687 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">38688 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

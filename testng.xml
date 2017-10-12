@@ -5,13 +5,18 @@
 	<parameter name="password" value="eoty2017" />
 	<test name="Edit">
 		<classes>
-			<class name="executionEngine.AboutEvent">
+		<class name="executionEngine.AboutEvent">
 				<methods>
-					<include name="AboutEventEdit" />
-					<exclude name="editandactivateorganizer" />
-					<exclude name="searchAndDeleteorganizer" />
+					<exclude name="AboutEventEdit" />
 				</methods>
 			</class>
-		</classes>
+		<class name="executionEngine.DelegatesTest">
+				<methods>
+					<include name="adddelegates" />
+					<include name="editandectivatecategory" />
+					<include name="searchAndDeletecategory" />
+				</methods>
+			</class>
+			</classes>
 	</test>
 </suite> 

@@ -2,20 +2,30 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Show time" duration-ms="38968" started-at="2017-10-10T06:19:03Z" finished-at="2017-10-10T06:19:42Z">
+  <suite name="Show time" duration-ms="28431" started-at="2017-10-12T06:17:50Z" finished-at="2017-10-12T06:18:19Z">
     <groups>
     </groups>
-    <test name="Edit" duration-ms="38968" started-at="2017-10-10T06:19:03Z" finished-at="2017-10-10T06:19:42Z">
+    <test name="Edit" duration-ms="28431" started-at="2017-10-12T06:17:50Z" finished-at="2017-10-12T06:18:19Z">
       <class name="executionEngine.AboutEvent">
-        <test-method status="PASS" signature="OpenBrowse()[pri:0, instance:executionEngine.AboutEvent@685cb137]" name="OpenBrowse" is-config="true" duration-ms="7044" started-at="2017-10-10T11:49:03Z" finished-at="2017-10-10T11:49:10Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OpenBrowse -->
-        <test-method status="PASS" signature="startReport()[pri:0, instance:executionEngine.AboutEvent@685cb137]" name="startReport" is-config="true" duration-ms="99" started-at="2017-10-10T11:49:10Z" depends-on-methods="executionEngine.FirefoxTest.OpenBrowse" finished-at="2017-10-10T11:49:10Z">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:executionEngine.AboutEvent@204f30ec]" name="startReport" is-config="true" duration-ms="187" started-at="2017-10-12T11:47:50Z" finished-at="2017-10-12T11:47:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="AboutEventEdit(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.AboutEvent@685cb137]" name="AboutEventEdit" duration-ms="31488" started-at="2017-10-10T11:49:10Z" finished-at="2017-10-10T11:49:42Z">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:executionEngine.DelegatesTest@6093dd95]" name="startReport" is-config="true" duration-ms="0" started-at="2017-10-12T11:47:51Z" finished-at="2017-10-12T11:47:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:executionEngine.AboutEvent@204f30ec]" name="teardown" is-config="true" duration-ms="0" started-at="2017-10-12T11:48:19Z" finished-at="2017-10-12T11:48:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="SKIP" signature="teardown()[pri:0, instance:executionEngine.DelegatesTest@6093dd95]" name="teardown" is-config="true" duration-ms="0" started-at="2017-10-12T11:48:19Z" finished-at="2017-10-12T11:48:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- executionEngine.AboutEvent -->
+      <class name="executionEngine.DelegatesTest">
+        <test-method status="PASS" signature="OpenBrowse(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.DelegatesTest@6093dd95]" name="OpenBrowse" is-config="true" duration-ms="6966" started-at="2017-10-12T11:47:51Z" finished-at="2017-10-12T11:47:58Z">
           <params>
             <param index="0">
               <value>
@@ -30,27 +40,72 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AboutEventEdit -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.AboutEvent@685cb137]" name="getResult" is-config="true" duration-ms="50" started-at="2017-10-10T11:49:42Z" finished-at="2017-10-10T11:49:42Z">
+        </test-method> <!-- OpenBrowse -->
+        <test-method status="PASS" signature="adddelegates(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.DelegatesTest@6093dd95]" name="adddelegates" duration-ms="21217" started-at="2017-10-12T11:47:58Z" finished-at="2017-10-12T11:48:19Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=AboutEventEdit status=SUCCESS method=AboutEvent.AboutEventEdit(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.AboutEvent@685cb137] output={null}]]]>
+                <![CDATA[eoty2017@showtimemobileapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[eoty2017]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- adddelegates -->
+        <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.DelegatesTest@6093dd95]" name="getResult" is-config="true" duration-ms="0" started-at="2017-10-12T11:48:19Z" finished-at="2017-10-12T11:48:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=adddelegates status=SUCCESS method=DelegatesTest.adddelegates(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.DelegatesTest@6093dd95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at executionEngine.DelegatesTest.getResult(DelegatesTest.java:151)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:786)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:executionEngine.AboutEvent@685cb137]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-10-10T11:49:42Z" finished-at="2017-10-10T11:49:42Z">
+        <test-method status="SKIP" signature="execute_Logout()[pri:0, instance:executionEngine.DelegatesTest@6093dd95]" name="execute_Logout" is-config="true" duration-ms="0" started-at="2017-10-12T11:48:19Z" finished-at="2017-10-12T11:48:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:executionEngine.AboutEvent@685cb137]" name="teardown" is-config="true" duration-ms="278" started-at="2017-10-10T11:49:42Z" finished-at="2017-10-10T11:49:42Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- executionEngine.AboutEvent -->
+        </test-method> <!-- execute_Logout -->
+      </class> <!-- executionEngine.DelegatesTest -->
     </test> <!-- Edit -->
   </suite> <!-- Show time -->
 </testng-results>

@@ -23,7 +23,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import config.Constants;
 
-public class DelegatesTest extends FirefoxTest {
+public class DelegatesTest extends ChromeTest {
 
 
 		String Firstname,Lastname,Designation,Firm,TwitterURL,LinkedinURL,WebsiteURL,FacebookURL,Role,Industry,Phoneno,Email,Descrption;

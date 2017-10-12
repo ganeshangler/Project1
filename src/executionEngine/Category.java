@@ -29,7 +29,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import config.Constants;
 
-public class Category extends FirefoxTest {
+public class Category extends ChromeTest {
 	String categoryValue,editCategoryValue;
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
@@ -156,7 +156,7 @@ public class Category extends FirefoxTest {
 	public void teardown()
 	{
 		extent.flush();
-		driver.close();
+		//driver.close();
 	}
 
 }

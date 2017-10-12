@@ -27,7 +27,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import config.Constants;
 
-public class NewsManagement extends FirefoxTest {
+public class NewsManagement extends ChromeTest {
 	String Titlevalue,DescriptionValue,EditTitleValue,EditDescriptionValue;
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
@@ -149,7 +149,7 @@ public class NewsManagement extends FirefoxTest {
 	public void teardown()
 	{
 		extent.flush();
-		driver.close();
+		//driver.close();
 	}
 
 

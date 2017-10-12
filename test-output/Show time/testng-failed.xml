@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Show time]">
+<suite name="Failed suite [Show time]">
   <parameter name="password" value="eoty2017"/>
   <parameter name="username" value="eoty2017@showtimemobileapp.com"/>
   <test name="Edit(failed)">
     <classes>
-      <class name="executionEngine.AboutEvent">
+      <class name="executionEngine.DelegatesTest">
         <methods>
           <include name="getResult"/>
+          <include name="startReport"/>
+          <include name="adddelegates" invocation-numbers="0"/>
           <include name="OpenBrowse"/>
-          <include name="AboutEventEdit" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- executionEngine.DelegatesTest -->
+      <class name="executionEngine.AboutEvent">
+        <methods>
           <include name="startReport"/>
         </methods>
       </class> <!-- executionEngine.AboutEvent -->

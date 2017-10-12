@@ -25,7 +25,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import config.Constants;
 
-public class OrganizerManagement extends FirefoxTest{
+public class OrganizerManagement extends ChromeTest{
 
 
 
@@ -154,7 +154,7 @@ public class OrganizerManagement extends FirefoxTest{
 	public void teardown()
 	{
 		extent.flush();
-		driver.close();
+		//driver.close();
 	}
 
 

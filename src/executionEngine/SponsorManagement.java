@@ -27,7 +27,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import config.Constants;
 
-public class SponsorManagement extends FirefoxTest {
+public class SponsorManagement extends ChromeTest {
 
 	String Sponsorname,SponsorType,TwitterURL,LinkedInURL,WebsiteURL,DescriptionValue,EditSponsorname,EditSponsorType,EditTwitterURL,EditLinkedInURL,EditWebsiteURL,EditDescriptionValue;
 
@@ -159,7 +159,7 @@ public class SponsorManagement extends FirefoxTest {
 	public void teardown()
 	{
 		extent.flush();
-		driver.close();
+		//driver.close();
 	}
 
 

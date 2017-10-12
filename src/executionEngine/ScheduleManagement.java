@@ -27,7 +27,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import config.Constants;
 
-public class ScheduleManagement extends FirefoxTest {
+public class ScheduleManagement extends ChromeTest {
 	String VenueValue,TitleValue,DescriptionValue,EditVenueValue,EditTitleValue,EditDescriptionValue;
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
@@ -156,7 +156,7 @@ public class ScheduleManagement extends FirefoxTest {
 	public void teardown()
 	{
 		extent.flush();
-		driver.close();
+		//driver.close();
 	}
 
 

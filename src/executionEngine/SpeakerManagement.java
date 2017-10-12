@@ -28,7 +28,7 @@ import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 
-public class SpeakerManagement extends FirefoxTest {
+public class SpeakerManagement extends ChromeTest {
 
 	String Firstname,Lastname,Designation,Firm,TwitterURL,LinkedinURL,WebsiteURL,FacebookURL,Role,Industry,Phoneno,Email,Descrption;
 	String EditFirstname,EditLastname,EditDesignation,EditFirm,EditTwitterURL,EditLinkedinURL,EditWebsiteURL,EditFacebookURL,EditRole,EditIndustry,EditPhoneno,EditEmail,EditDescrption;
@@ -172,7 +172,7 @@ public class SpeakerManagement extends FirefoxTest {
 	public void teardown()
 	{
 		extent.flush();
-		driver.close();
+		//driver.close();
 	}
 
 
