@@ -95,7 +95,7 @@ public class ScheduleAction  {
 		Actions build = new Actions(driver);
 		build.moveToElement(dropdown).build().perform();
 		WebElement m2m= driver.findElement(By.id("session_id"));
-		m2m.click();
+		utility.Utilis.ExecuteorClick(driver, dropdown);
 		m2m.sendKeys(Keys.ARROW_DOWN,Keys.ENTER);
 		SchedulePage.Textbox_ScheduleVenue(driver).clear();
 		SchedulePage.Textbox_ScheduleVenue(driver).sendKeys(EditVenueValue);

@@ -34,12 +34,11 @@ public class Category extends ChromeTest {
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
 	ExtentTest test;
-	int i1;
 	@BeforeTest
 
 	public void startReport()
 	{
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/MyownReport.html");
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/Category.html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("OS", "windows");
@@ -87,10 +86,6 @@ public class Category extends ChromeTest {
 		for(int i1=1;i1<rowNum;i1++)
 		{
 			editCategoryValue=ExcelUtils.getCellData(i1, 1);
-		}
-
-
-
 		HomePageAction.navigate_Category(driver);
 		TEST_RESULT getResult=CategoryAction.editAndActivateCategory(driver,editCategoryValue);
 		if(getResult==TEST_RESULT.RESULT_SUCCESS)
@@ -104,7 +99,7 @@ public class Category extends ChromeTest {
 		test=extent.createTest("editandectivatecategory","This  will perform  edit and activate category");
 		Assert.assertTrue(true);
 	
-
+		}
 	}
 
 	@Test(priority=3)

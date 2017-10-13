@@ -39,7 +39,7 @@ public class SpeakerManagement extends ChromeTest {
 
 	public void startReport()
 	{
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/SpeakerManagement.html");
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/Speaker.html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("OS", "windows");

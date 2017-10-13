@@ -16,33 +16,7 @@ import config.Constants;
 import pageObjects.*;
 public class AboutEventEditAction {
 	static ArrayList<String> viewed_Actual=new ArrayList<String>();
-/*	public  static enum TEST_RESULT 
-	{
-		RESULT_SUCCESS
-		{
-			@Override
-			public String toString()
-			{
-				return "Success";
-			}
-		},	
-		RESULT_FAILURE
-		{
-			@Override
-			public String toString()
-			{
-				return "Failure";
-			}
-		},
-		RESULT_ERROR
-		{
-			@Override
-			public String toString()
-			{
-				return "Error";
-			}
-		}, 
-	}*/
+
 	public static TEST_RESULT Editnews(WebDriver driver,String FacebookURL,String TwitterURL ,String YoutubeURL,String WebSiteURL)throws Exception
 	{
 

@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -33,7 +34,18 @@ public class ChromeTest
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 
 	}
-	@BeforeClass
+	@BeforeClass	
+	@Parameters({"username","password"})
+	public void ExecuteLogin(String username,String password) throws Exception
+	{
+	
+		LoginPage.TxtBox_username(driver).sendKeys(username);
+		LoginPage.TxtBox_password(driver).sendKeys(password);
+		LoginPage.Btn_Login(driver).click(); 
+		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+	}
+	@BeforeSuite
 	@Parameters({"username","password"})
 	public void OpenBrowse(String username,String password) throws Exception
 	{
@@ -43,12 +55,5 @@ public class ChromeTest
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(Constants.baseUrl);
-		LoginPage.TxtBox_username(driver).sendKeys(username);
-		LoginPage.TxtBox_password(driver).sendKeys(password);
-		LoginPage.Btn_Login(driver).click(); 
-		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
 	}
-
-
 }

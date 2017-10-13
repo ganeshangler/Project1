@@ -98,12 +98,12 @@ public class OrganizerManagementAction {
 			System.out.println("Testfailed");
 			return TEST_RESULT.RESULT_FAILURE;
 		}
-	
 	}
 
 	public static TEST_RESULT searchAndDeleteorganizer(WebDriver driver, String EditOrgaizernameValue) throws IOException, InterruptedException {
 
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
+		Thread.sleep(7000);
 		Organizer.Textbox_SearchText(driver).sendKeys(EditOrgaizernameValue);
 		utility.Utilis.capture(driver, "SearchOrganizerPage1");
 		utility.Utilis.capture(driver,"searchorganizer1");

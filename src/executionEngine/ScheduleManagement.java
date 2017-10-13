@@ -36,7 +36,7 @@ public class ScheduleManagement extends ChromeTest {
 
 	public void startReport()
 	{
-		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/MyownReport.html");
+		htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/Schedule.html");
 		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("OS", "windows");

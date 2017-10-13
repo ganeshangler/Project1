@@ -39,6 +39,7 @@ public class SpeakerManagemenAction {
 		Speaker.Textbox_Email(driver).sendKeys(Email);
 		Speaker.Textbox_Description(driver).sendKeys(Descrption);
 		Speaker.Browsebutton_Image(driver).sendKeys(System.getProperty("user.dir")+"\\src\\config\\Sponsorlogo.jpg");
+		utility.Utilis.ScrollDown(driver);
 		Speaker.Button_Save(driver).click();
 		driver.switchTo().alert().accept();
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);

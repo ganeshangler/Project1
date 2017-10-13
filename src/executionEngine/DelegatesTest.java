@@ -35,7 +35,7 @@ public class DelegatesTest extends ChromeTest {
 
 		public void startReport()
 		{
-			htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/SpeakerManagement.html");
+			htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"/test-output/DElegatesTest.html");
 			extent = new ExtentReports();
 			extent.attachReporter(htmlReporter);
 			extent.setSystemInfo("OS", "windows");
@@ -68,7 +68,7 @@ public class DelegatesTest extends ChromeTest {
 				Descrption=ExcelUtils.getCellData(i1, 12);
 */
 			HomePageAction.navigate_Delegates(driver);			
-		DelagatesAction.addcategorymaster(driver);
+		DelagatesAction.adddelegates(driver);
 	/*		if(testResult==TEST_RESULT.RESULT_SUCCESS)
 			{
 				ExcelUtils.setCellData("Pass", "Savesucess", i1, 13, 14);
@@ -84,8 +84,8 @@ public class DelegatesTest extends ChromeTest {
 		//}
 		@Test(priority=2)
 		@Parameters({"username","password"})
-		public void editandectivatespeaker(String username,String password) throws Exception {
-			ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_EditSpeakersheet_name);
+		public void editandectivatedelegates(String username,String password) throws Exception {
+/*			ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_EditSpeakersheet_name);
 			int rowNum=ExcelUtils.getRowCount(Constants.File_EditSpeakersheet_name);
 			for(int i1=1;i1<rowNum;i1++)
 			{
@@ -101,10 +101,10 @@ public class DelegatesTest extends ChromeTest {
 				EditIndustry=ExcelUtils.getCellData(i1, 9);
 				EditPhoneno=ExcelUtils.getCellData(i1, 10);
 				EditEmail=ExcelUtils.getCellData(i1, 11);
-				EditDescrption=ExcelUtils.getCellData(i1, 12);
-			HomePageAction.navigate_SpeakerMgmt(driver);
-			TEST_RESULT testResult=SpeakerManagemenAction.editandectivatespeaker(driver,EditFirstname,EditLastname,EditDesignation,EditFirm,EditTwitterURL,EditLinkedinURL,EditWebsiteURL,EditFacebookURL,EditRole,EditIndustry,EditPhoneno,EditEmail,EditDescrption);
-			if(testResult==TEST_RESULT.RESULT_SUCCESS)
+				EditDescrption=ExcelUtils.getCellData(i1, 12);*/
+			HomePageAction.navigate_Delegates(driver);
+			DelagatesAction.editandactivatedelegates(driver);
+			/*if(testResult==TEST_RESULT.RESULT_SUCCESS)
 			{
 				ExcelUtils.setCellData("Pass", "editandectivatesucess", i1, 13, 14);
 			}
@@ -114,10 +114,10 @@ public class DelegatesTest extends ChromeTest {
 			}
 			Assert.assertTrue(true);
 			test=extent.createTest("editandectivatespeaker","This  will perform  edit and activate schedule");
-			Assert.assertTrue(true);
+			Assert.assertTrue(true);*/
 
 		}
-		}
+	//	}
 
 		@Test(priority=3)
 		@Parameters({"username","password"})
@@ -142,7 +142,7 @@ public class DelegatesTest extends ChromeTest {
 			Assert.assertTrue(true);
 			}
 		}
-		@AfterMethod
+		/*@AfterMethod
 		public void getResult(ITestResult result) 
 		{
 
@@ -170,7 +170,7 @@ public class DelegatesTest extends ChromeTest {
 			extent.flush();
 			driver.close();
 		}
-
+*/
 
 
 }

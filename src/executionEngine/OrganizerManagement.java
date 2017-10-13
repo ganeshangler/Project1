@@ -107,8 +107,8 @@ public class OrganizerManagement extends ChromeTest{
 	@Test(priority=3)
 	@Parameters({"username","password"})
 	public void searchAndDeleteorganizer(String username,String password) throws Exception {
-		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_Newssheet_name);
-		int rowNum=ExcelUtils.getRowCount(Constants.File_Newssheet_name);
+		ExcelUtils.setExcelFile(Constants.Path_TestData+Constants.File_TestData,Constants.File_OrganizerSheet_name);
+		int rowNum=ExcelUtils.getRowCount(Constants.File_OrganizerSheet_name);
 		for(int i1=1;i1<rowNum;i1++)
 		{
 			EditOrgaizernameValue=ExcelUtils.getCellData(i1, 5); 

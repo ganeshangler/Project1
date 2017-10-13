@@ -192,5 +192,14 @@ public class DelegatesPage {
 		return element;
 
 	}
+	
+	
+	public static WebElement Label_Name (WebDriver driver) throws IOException
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element = driver.findElement(parser.getLocator("Delegates_LabelName"));
+		return element;
+
+	}
 
 }
