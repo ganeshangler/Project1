@@ -30,7 +30,7 @@ import appModules.HomePageAction;
 import appModules.LoginAction;
 import config.Constants;
 
-public class AboutEvent extends ChromeTest {
+public class AboutEvent extends FirefoxTest {
 	String FacebookURL,TwitterURL,YoutubeURL,WebSiteURL;
 	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent;
