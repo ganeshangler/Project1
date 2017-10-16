@@ -13,11 +13,11 @@ import config.Constants;
 
 public class LoginAction   {
 
-	public static void execute_Login(WebDriver driver)throws Exception
+	public static void execute_Login(WebDriver driver, String Username, String Password)throws Exception
 	{
 		//Utilis.capture(driver,"Login");
-		LoginPage.TxtBox_username(driver).sendKeys("eoty2017@showtimemobileapp.com");
-		LoginPage.TxtBox_password(driver).sendKeys("eoty2017");
+		LoginPage.TxtBox_username(driver).sendKeys(Username);
+		LoginPage.TxtBox_password(driver).sendKeys(Password);
 		LoginPage.Btn_Login(driver).click(); 
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		driver.manage().window().maximize();

@@ -1,23 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17634" started-at="2017-09-25T06:51:44Z" finished-at="2017-09-25T06:52:02Z">
+  <suite name="Show time" duration-ms="168089" started-at="2017-10-16T04:25:26Z" finished-at="2017-10-16T04:28:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17634" started-at="2017-09-25T06:51:44Z" finished-at="2017-09-25T06:52:02Z">
-      <class name="executionEngine.AboutEvent">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:executionEngine.AboutEvent@6d4b1c02]" name="beforeClass" is-config="true" duration-ms="4770" started-at="2017-09-25T12:21:44Z" finished-at="2017-09-25T12:21:49Z">
+    <test name="Add" duration-ms="168089" started-at="2017-10-16T04:25:26Z" finished-at="2017-10-16T04:28:15Z">
+      <class name="executionEngine.Announcement">
+        <test-method status="PASS" signature="OpenBrowse(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.Announcement@47c62251]" name="OpenBrowse" is-config="true" duration-ms="5742" started-at="2017-10-16T09:55:21Z" finished-at="2017-10-16T09:55:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eoty2017@showtimemobileapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[eoty2017]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="FAIL" signature="AboutEventEdit()[pri:0, instance:executionEngine.AboutEvent@6d4b1c02]" name="AboutEventEdit" duration-ms="10518" started-at="2017-09-25T12:21:49Z" finished-at="2017-09-25T12:21:59Z">
-          <exception class="java.lang.NullPointerException">
+        </test-method> <!-- OpenBrowse -->
+        <test-method status="PASS" signature="startReport()[pri:0, instance:executionEngine.Announcement@47c62251]" name="startReport" is-config="true" duration-ms="121" started-at="2017-10-16T09:55:26Z" finished-at="2017-10-16T09:55:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="ExecuteLogin(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.Announcement@47c62251]" name="ExecuteLogin" is-config="true" duration-ms="1789" started-at="2017-10-16T09:55:27Z" finished-at="2017-10-16T09:55:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eoty2017@showtimemobileapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[eoty2017]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExecuteLogin -->
+        <test-method status="PASS" signature="SendAnnouncement(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.Announcement@47c62251]" name="SendAnnouncement" duration-ms="45479" started-at="2017-10-16T09:55:28Z" finished-at="2017-10-16T09:56:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eoty2017@showtimemobileapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[eoty2017]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SendAnnouncement -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.Announcement@47c62251]" name="getResult" is-config="true" duration-ms="16" started-at="2017-10-16T09:56:14Z" finished-at="2017-10-16T09:56:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SendAnnouncement status=SUCCESS method=Announcement.SendAnnouncement(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.Announcement@47c62251] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="ViewAnnouncement(java.lang.String, java.lang.String)[pri:1, instance:executionEngine.Announcement@47c62251]" name="ViewAnnouncement" duration-ms="28415" started-at="2017-10-16T09:56:14Z" finished-at="2017-10-16T09:56:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eoty2017@showtimemobileapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[eoty2017]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ViewAnnouncement -->
+        <test-method status="FAIL" signature="DeleteAnnouncement(java.lang.String, java.lang.String)[pri:2, instance:executionEngine.Announcement@47c62251]" name="DeleteAnnouncement" duration-ms="83327" started-at="2017-10-16T09:56:42Z" finished-at="2017-10-16T09:58:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eoty2017@showtimemobileapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[eoty2017]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: //*[@id="news"]/tbody/tr/td[3]/button[2]/i 
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:26.402Z'
+System info: host: 'ANGLER109', ip: '192.168.219.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_74'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\rajesh.v\AppData\Local\Temp\rust_mozprofile.xef5r9WkzfBF, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=56.0, platformVersion=10.0, moz:processID=11276, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: 4d1a709d-080f-4724-925d-c6ffd1f016cd
+*** Element info: {Using=xpath, value=//*[@id="news"]/tbody/tr/td[3]/button[2]/i }]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at utility.Utilis.ScrollDown(Utilis.java:28)
-	at appModules.AboutEventEditAction.Editnews(AboutEventEditAction.java:24)
-	at executionEngine.AboutEvent.AboutEventEdit(AboutEvent.java:64)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="news"]/tbody/tr/td[3]/button[2]/i 
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:26.402Z'
+System info: host: 'ANGLER109', ip: '192.168.219.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_74'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\rajesh.v\AppData\Local\Temp\rust_mozprofile.xef5r9WkzfBF, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=56.0, platformVersion=10.0, moz:processID=11276, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: 4d1a709d-080f-4724-925d-c6ffd1f016cd
+*** Element info: {Using=xpath, value=//*[@id="news"]/tbody/tr/td[3]/button[2]/i }
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at pageObjects.AnnouncementPage.Annon_delete_btn(AnnouncementPage.java:92)
+	at appModules.AnnouncementAction.Delete_Announcement(AnnouncementAction.java:184)
+	at executionEngine.Announcement.DeleteAnnouncement(Announcement.java:129)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -45,15 +163,41 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AboutEventEdit -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:executionEngine.AboutEvent@6d4b1c02]" name="afterClass" is-config="true" duration-ms="2319" started-at="2017-09-25T12:21:59Z" finished-at="2017-09-25T12:22:02Z">
+        </test-method> <!-- DeleteAnnouncement -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.Announcement@47c62251]" name="getResult" is-config="true" duration-ms="0" started-at="2017-10-16T09:56:42Z" finished-at="2017-10-16T09:56:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ViewAnnouncement status=SUCCESS method=Announcement.ViewAnnouncement(java.lang.String, java.lang.String)[pri:1, instance:executionEngine.Announcement@47c62251] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-      </class> <!-- executionEngine.AboutEvent -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="execute_Logout()[pri:0, instance:executionEngine.Announcement@47c62251]" name="execute_Logout" is-config="true" duration-ms="8540" started-at="2017-10-16T09:58:06Z" finished-at="2017-10-16T09:58:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execute_Logout -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.Announcement@47c62251]" name="getResult" is-config="true" duration-ms="0" started-at="2017-10-16T09:58:06Z" finished-at="2017-10-16T09:58:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=DeleteAnnouncement status=FAILURE method=Announcement.DeleteAnnouncement(java.lang.String, java.lang.String)[pri:2, instance:executionEngine.Announcement@47c62251] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:executionEngine.Announcement@47c62251]" name="teardown" is-config="true" duration-ms="359" started-at="2017-10-16T09:58:14Z" finished-at="2017-10-16T09:58:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- executionEngine.Announcement -->
+    </test> <!-- Add -->
+  </suite> <!-- Show time -->
 </testng-results>

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Show time">
- 
-  <test name="Edit">
+ <parameter name="username" value="eoty2017@showtimemobileapp.com"/>
+ <parameter name="password" value="eoty2017"/>
+  <test name="Add">
 	 <classes>
-   <class name="executionEngine.AboutEvent">
+   <class name="executionEngine.Announcement">
        	<methods>
-       		<include name="AboutEventEdit" />
+       	    <include name="SendAnnouncement" />
+       	    <include name="ViewAnnouncement" />
+       		<include name="DeleteAnnouncement" />
        	</methods>
        </class>
-       
-      </classes>
-     </test>
-     
+       </classes>
+     </test> 
 </suite> 

@@ -24,5 +24,14 @@ public class HomePageAction {
 		Utilis.capture(driver,"AbouteventPage");
 		
 	}
+	public static void navigate_announcement(WebDriver driver)throws Exception
+	{
+		Utilis.capture(driver,"homepage");
+		HomePage.Annon_Icon(driver).click();
+		Thread.sleep(6000);
+		HomePage.Annon_Announbutton(driver).click();
+		Utilis.capture(driver,"AnnouncementPage");
+		
+	}
 }
 
