@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Show time">
+<<<<<<< HEAD
  <parameter name="username" value="eoty2017@showtimemobileapp.com"/>
  <parameter name="password" value="eoty2017"/>
   <test name="Add">
@@ -14,4 +15,24 @@
        </class>
        </classes>
      </test> 
+=======
+	<parameter name="username" value="eoty2017@showtimemobileapp.com" />
+	<parameter name="password" value="eoty2017" />
+	<test name="Edit">
+		<classes>
+		<class name="executionEngine.AboutEvent">
+				<methods>
+					<exclude name="AboutEventEdit" />
+				</methods>
+			</class>
+		<class name="executionEngine.DelegatesTest">
+				<methods>
+					<include name="adddelegates" />
+					<include name="editandectivatecategory" />
+					<include name="searchAndDeletecategory" />
+				</methods>
+			</class>
+			</classes>
+	</test>
+>>>>>>> Indu_Showtime
 </suite> 

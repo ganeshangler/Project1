@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 /jarfiles/
 /testData/
 /executionEngine/
 /appModules/
 /pageObjects/
 /utility/
+=======
+/executionEngine/
+/appModules/
+/testData/
+/utility/
+/pageObjects/
+/config/
+>>>>>>> Indu_Showtime

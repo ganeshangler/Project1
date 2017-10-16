@@ -7,7 +7,7 @@ import utility.RepositoryParser;
 public class LoginPage {
 	
 	public static RepositoryParser parser=new RepositoryParser();
-	private static WebElement element = null;
+	private static WebElement element = null ;
 
 	public static WebElement TxtBox_username (WebDriver driver) throws Exception
 	{

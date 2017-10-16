@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
@@ -15,6 +16,19 @@
           <include name="execute_Logout"/>
         </methods>
       </class> <!-- executionEngine.Announcement -->
+=======
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="executionEngine.NewsManagement">
+        <methods>
+          <include name="searchAndDeletenews"/>
+          <include name="editandectivatenews"/>
+          <include name="startReport"/>
+          <include name="addnews"/>
+        </methods>
+      </class> <!-- executionEngine.NewsManagement -->
+>>>>>>> Indu_Showtime
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
