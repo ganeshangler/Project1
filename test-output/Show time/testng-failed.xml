@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<<<<<<< HEAD
 <suite name="Failed suite [Show time]">
   <parameter name="password" value="eoty2017"/>
   <parameter name="username" value="eoty2017@showtimemobileapp.com"/>
@@ -20,4 +21,24 @@
       </class> <!-- executionEngine.AboutEvent -->
     </classes>
   </test> <!-- Edit(failed) -->
+=======
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Show time]">
+  <parameter name="password" value="eoty2017"/>
+  <parameter name="username" value="eoty2017@showtimemobileapp.com"/>
+  <test name="Add(failed)">
+    <classes>
+      <class name="executionEngine.Announcement">
+        <methods>
+          <include name="DeleteAnnouncement" invocation-numbers="0"/>
+          <include name="teardown"/>
+          <include name="OpenBrowse"/>
+          <include name="execute_Logout"/>
+          <include name="ExecuteLogin"/>
+          <include name="getResult"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- executionEngine.Announcement -->
+    </classes>
+  </test> <!-- Add(failed) -->
+>>>>>>> Rajesh_Showtime
 </suite> <!-- Failed suite [Show time] -->

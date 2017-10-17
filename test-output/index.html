@@ -2,9 +2,10 @@
 
 <html>
   <head>
+  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -23,7 +24,11 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
+<<<<<<< HEAD
       <span class="top-banner-font-1">1 suite</span>
+=======
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+>>>>>>> Rajesh_Showtime
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +42,11 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Show_time">
+<<<<<<< HEAD
               <span class="suite-name border-passed">Show time</span>
+=======
+              <span class="suite-name border-failed">Show time</span>
+>>>>>>> Rajesh_Showtime
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +57,11 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Show_time">
+<<<<<<< HEAD
                     <span>D:\Indumathy\ShowTimeAutomation\Project1\testng.xml</span>
+=======
+                    <span>E:\Rajesh\Showtime_Workspace\Project1\testng.xml</span>
+>>>>>>> Rajesh_Showtime
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +103,25 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
+<<<<<<< HEAD
                     <span class="method-stats">1 method,   1 passed</span>
+=======
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Show_time" class="hide-methods failed suite-Show_time"> (hide)</a> <!-- hide-methods failed suite-Show_time -->
+                      <a href="#" panel-name="suite-Show_time" class="show-methods failed suite-Show_time"> (show)</a> <!-- show-methods failed suite-Show_time -->
+                    </span>
+                    <div class="method-list-content failed suite-Show_time">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.Announcement" hash-for-method="DeleteAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)">DeleteAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Show_time -->
+>>>>>>> Rajesh_Showtime
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +132,16 @@
                     <div class="method-list-content passed suite-Show_time">
                       <span>
                         <img width="3%" src="passed.png"/>
+<<<<<<< HEAD
                         <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.DelegatesTest" hash-for-method="adddelegates(eoty2017@showtimemobileapp.com, eoty2017)">adddelegates(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
+=======
+                        <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.Announcement" hash-for-method="SendAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)">SendAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Show_time" title="executionEngine.Announcement" hash-for-method="ViewAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)">ViewAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)</a> <!-- method navigator-link -->
+>>>>>>> Rajesh_Showtime
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Show_time -->
@@ -116,17 +156,77 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Show_time" class="panel Show_time">
+<<<<<<< HEAD
           <div class="suite-Show_time-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">executionEngine.DelegatesTest</span>
+=======
+          <div class="suite-Show_time-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">executionEngine.Announcement</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="DeleteAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)">
+                  </a> <!-- DeleteAnnouncement(eoty2017@showtimemobileapp.com, eoty2017) -->
+                  <span class="method-name">DeleteAnnouncement</span>
+                  <span class="parameters">(eoty2017@showtimemobileapp.com, eoty2017)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id=&quot;news&quot;]/tbody/tr/td[3]/button[2]/i 
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T16:15:26.402Z&apos;
+System info: host: &apos;ANGLER109&apos;, ip: &apos;192.168.219.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_74&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\rajesh.v\AppData\Local\Temp\rust_mozprofile.xef5r9WkzfBF, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=56.0, platformVersion=10.0, moz:processID=11276, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: 4d1a709d-080f-4724-925d-c6ffd1f016cd
+*** Element info: {Using=xpath, value=//*[@id=&quot;news&quot;]/tbody/tr/td[3]/button[2]/i }
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at pageObjects.AnnouncementPage.Annon_delete_btn(AnnouncementPage.java:92)
+	at appModules.AnnouncementAction.Delete_Announcement(AnnouncementAction.java:184)
+	at executionEngine.Announcement.DeleteAnnouncement(Announcement.java:129)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Show_time-class-failed -->
+          <div class="suite-Show_time-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">executionEngine.Announcement</span>
+>>>>>>> Rajesh_Showtime
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+<<<<<<< HEAD
                   <a name="adddelegates(eoty2017@showtimemobileapp.com, eoty2017)">
                   </a> <!-- adddelegates(eoty2017@showtimemobileapp.com, eoty2017) -->
                   <span class="method-name">adddelegates</span>
+=======
+                  <a name="SendAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)">
+                  </a> <!-- SendAnnouncement(eoty2017@showtimemobileapp.com, eoty2017) -->
+                  <span class="method-name">SendAnnouncement</span>
+                  <span class="parameters">(eoty2017@showtimemobileapp.com, eoty2017)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="ViewAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)">
+                  </a> <!-- ViewAnnouncement(eoty2017@showtimemobileapp.com, eoty2017) -->
+                  <span class="method-name">ViewAnnouncement</span>
+>>>>>>> Rajesh_Showtime
                   <span class="parameters">(eoty2017@showtimemobileapp.com, eoty2017)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -135,12 +235,17 @@
         </div> <!-- panel Show_time -->
         <div panel-name="test-xml-Show_time" class="panel">
           <div class="main-panel-header rounded-window-top">
+<<<<<<< HEAD
             <span class="header-content">D:\Indumathy\ShowTimeAutomation\Project1\testng.xml</span>
+=======
+            <span class="header-content">E:\Rajesh\Showtime_Workspace\Project1\testng.xml</span>
+>>>>>>> Rajesh_Showtime
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+<<<<<<< HEAD
 &lt;suite name=&quot;Show time&quot;&gt;
   &lt;parameter name=&quot;password&quot; value=&quot;eoty2017&quot;/&gt;
   &lt;parameter name=&quot;username&quot; value=&quot;eoty2017@showtimemobileapp.com&quot;/&gt;
@@ -160,6 +265,22 @@
       &lt;/class&gt; &lt;!-- executionEngine.DelegatesTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Edit --&gt;
+=======
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Show time&quot;&gt;
+  &lt;parameter name=&quot;password&quot; value=&quot;eoty2017&quot;/&gt;
+  &lt;parameter name=&quot;username&quot; value=&quot;eoty2017@showtimemobileapp.com&quot;/&gt;
+  &lt;test name=&quot;Add&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;executionEngine.Announcement&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;SendAnnouncement&quot;/&gt;
+          &lt;include name=&quot;ViewAnnouncement&quot;/&gt;
+          &lt;include name=&quot;DeleteAnnouncement&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- executionEngine.Announcement --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Add --&gt;
+>>>>>>> Rajesh_Showtime
 &lt;/suite&gt; &lt;!-- Show time --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -171,7 +292,11 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
+<<<<<<< HEAD
                 <span class="test-name">Edit (2 classes)</span>
+=======
+                <span class="test-name">Add (1 class)</span>
+>>>>>>> Rajesh_Showtime
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -197,16 +322,34 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
+<<<<<<< HEAD
 data.setCell(0, 1, 'adddelegates')
 data.setCell(0, 2, 'executionEngine.DelegatesTest')
 data.setCell(0, 3, 21217);
+=======
+data.setCell(0, 1, 'DeleteAnnouncement')
+data.setCell(0, 2, 'executionEngine.Announcement')
+data.setCell(0, 3, 83327);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'SendAnnouncement')
+data.setCell(1, 2, 'executionEngine.Announcement')
+data.setCell(1, 3, 45479);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'ViewAnnouncement')
+data.setCell(2, 2, 'executionEngine.Announcement')
+data.setCell(2, 3, 28415);
+>>>>>>> Rajesh_Showtime
 window.suiteTableData['Show_time']= { tableData: data, tableDiv: 'times-div-Show_time'}
 return data;
 }
               </script>
+<<<<<<< HEAD
               <span class="suite-total-time">Total running time: 21 seconds</span>
+=======
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+>>>>>>> Rajesh_Showtime
               <div id="times-div-Show_time">
               </div> <!-- times-div-Show_time -->
             </div> <!-- times-div -->
@@ -221,6 +364,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Show_time" class="panel">
           <div class="main-panel-header rounded-window-top">
+<<<<<<< HEAD
             <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
@@ -240,6 +384,11 @@ return data;
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
+=======
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+>>>>>>> Rajesh_Showtime
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Show_time" class="panel">
@@ -248,6 +397,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+<<<<<<< HEAD
               <div class="chronological-class-name">executionEngine.AboutEvent</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">startReport</span>
@@ -274,6 +424,55 @@ return data;
                 <span class="method-name">getResult([TestResult name=adddelegates status=SUCCESS method=DelegatesTest.adddelegates(java.lang.String, jav...)</span>
                 <span class="method-start">28394 ms</span>
               </div> <!-- configuration-method after -->
+=======
+              <div class="chronological-class-name">executionEngine.Announcement</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">OpenBrowse(eoty2017@showtimemobileapp.com, eoty2017)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-test before">
+                <span class="method-name">startReport</span>
+                <span class="method-start">5746 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">ExecuteLogin(eoty2017@showtimemobileapp.com, eoty2017)</span>
+                <span class="method-start">5875 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">SendAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)</span>
+                <span class="method-start">7679 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=SendAnnouncement status=SUCCESS method=Announcement.SendAnnouncement(java.lang.Stri...)</span>
+                <span class="method-start">53158 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">ViewAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)</span>
+                <span class="method-start">53174 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=ViewAnnouncement status=SUCCESS method=Announcement.ViewAnnouncement(java.lang.Stri...)</span>
+                <span class="method-start">81589 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">DeleteAnnouncement(eoty2017@showtimemobileapp.com, eoty2017)</span>
+                <span class="method-start">81589 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getResult([TestResult name=DeleteAnnouncement status=FAILURE method=Announcement.DeleteAnnouncement(java.lang....)</span>
+                <span class="method-start">164932 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">execute_Logout</span>
+                <span class="method-start">164932 ms</span>
+              </div> <!-- configuration-class after -->
+              <div class="configuration-test after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">173472 ms</span>
+              </div> <!-- configuration-test after -->
+>>>>>>> Rajesh_Showtime
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

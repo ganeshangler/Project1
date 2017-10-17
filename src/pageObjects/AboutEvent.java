@@ -9,7 +9,7 @@ public class AboutEvent {
 	public static RepositoryParser parser=new RepositoryParser();
 	private static WebElement element = null;
 
-	public static WebElement editIcon (WebDriver driver) throws Exception
+	public static WebElement editIcon(WebDriver driver) throws Exception
 	{
 		parser.RepositoryParser(Constants.path_ObjectRepo);
     	element = driver.findElement(parser.getLocator("IconEdit_AboutEvent"));

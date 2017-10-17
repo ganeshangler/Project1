@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Show time">
+<<<<<<< HEAD
 	<parameter name="username" value="eoty2017@showtimemobileapp.com" />
 	<parameter name="password" value="eoty2017" />
 	<test name="Edit">
@@ -19,4 +20,19 @@
 			</class>
 			</classes>
 	</test>
+=======
+ <parameter name="username" value="eoty2017@showtimemobileapp.com"/>
+ <parameter name="password" value="eoty2017"/>
+  <test name="Add">
+	 <classes>
+   <class name="executionEngine.Announcement">
+       	<methods>
+       	    <include name="SendAnnouncement" />
+       	    <include name="ViewAnnouncement" />
+       		<include name="DeleteAnnouncement" />
+       	</methods>
+       </class>
+       </classes>
+     </test> 
+>>>>>>> Rajesh_Showtime
 </suite> 

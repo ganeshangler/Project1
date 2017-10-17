@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
@@ -26,6 +27,16 @@
       </class> <!-- executionEngine.AboutEvent -->
       <class name="executionEngine.DelegatesTest">
         <test-method status="PASS" signature="OpenBrowse(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.DelegatesTest@6093dd95]" name="OpenBrowse" is-config="true" duration-ms="6966" started-at="2017-10-12T11:47:51Z" finished-at="2017-10-12T11:47:58Z">
+=======
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Show time" duration-ms="168089" started-at="2017-10-16T04:25:26Z" finished-at="2017-10-16T04:28:15Z">
+    <groups>
+    </groups>
+    <test name="Add" duration-ms="168089" started-at="2017-10-16T04:25:26Z" finished-at="2017-10-16T04:28:15Z">
+      <class name="executionEngine.Announcement">
+        <test-method status="PASS" signature="OpenBrowse(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.Announcement@47c62251]" name="OpenBrowse" is-config="true" duration-ms="5742" started-at="2017-10-16T09:55:21Z" finished-at="2017-10-16T09:55:26Z">
           <params>
             <param index="0">
               <value>
@@ -41,7 +52,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenBrowse -->
-        <test-method status="PASS" signature="adddelegates(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.DelegatesTest@6093dd95]" name="adddelegates" duration-ms="21217" started-at="2017-10-12T11:47:58Z" finished-at="2017-10-12T11:48:19Z">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:executionEngine.Announcement@47c62251]" name="startReport" is-config="true" duration-ms="121" started-at="2017-10-16T09:55:26Z" finished-at="2017-10-16T09:55:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="ExecuteLogin(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.Announcement@47c62251]" name="ExecuteLogin" is-config="true" duration-ms="1789" started-at="2017-10-16T09:55:27Z" finished-at="2017-10-16T09:55:28Z">
           <params>
             <param index="0">
               <value>
@@ -56,6 +71,56 @@
           </params>
           <reporter-output>
           </reporter-output>
+        </test-method> <!-- ExecuteLogin -->
+        <test-method status="PASS" signature="SendAnnouncement(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.Announcement@47c62251]" name="SendAnnouncement" duration-ms="45479" started-at="2017-10-16T09:55:28Z" finished-at="2017-10-16T09:56:14Z">
+>>>>>>> Rajesh_Showtime
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eoty2017@showtimemobileapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[eoty2017]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+<<<<<<< HEAD
+        </test-method> <!-- OpenBrowse -->
+        <test-method status="PASS" signature="adddelegates(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.DelegatesTest@6093dd95]" name="adddelegates" duration-ms="21217" started-at="2017-10-12T11:47:58Z" finished-at="2017-10-12T11:48:19Z">
+=======
+        </test-method> <!-- SendAnnouncement -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.Announcement@47c62251]" name="getResult" is-config="true" duration-ms="16" started-at="2017-10-16T09:56:14Z" finished-at="2017-10-16T09:56:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SendAnnouncement status=SUCCESS method=Announcement.SendAnnouncement(java.lang.String, java.lang.String)[pri:0, instance:executionEngine.Announcement@47c62251] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="ViewAnnouncement(java.lang.String, java.lang.String)[pri:1, instance:executionEngine.Announcement@47c62251]" name="ViewAnnouncement" duration-ms="28415" started-at="2017-10-16T09:56:14Z" finished-at="2017-10-16T09:56:42Z">
+>>>>>>> Rajesh_Showtime
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eoty2017@showtimemobileapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[eoty2017]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- adddelegates -->
         <test-method status="FAIL" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.DelegatesTest@6093dd95]" name="getResult" is-config="true" duration-ms="0" started-at="2017-10-12T11:48:19Z" finished-at="2017-10-12T11:48:19Z">
           <params>
@@ -69,10 +134,64 @@
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 	at executionEngine.DelegatesTest.getResult(DelegatesTest.java:151)
+=======
+        </test-method> <!-- ViewAnnouncement -->
+        <test-method status="FAIL" signature="DeleteAnnouncement(java.lang.String, java.lang.String)[pri:2, instance:executionEngine.Announcement@47c62251]" name="DeleteAnnouncement" duration-ms="83327" started-at="2017-10-16T09:56:42Z" finished-at="2017-10-16T09:58:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[eoty2017@showtimemobileapp.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[eoty2017]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: //*[@id="news"]/tbody/tr/td[3]/button[2]/i 
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:26.402Z'
+System info: host: 'ANGLER109', ip: '192.168.219.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_74'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\rajesh.v\AppData\Local\Temp\rust_mozprofile.xef5r9WkzfBF, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=56.0, platformVersion=10.0, moz:processID=11276, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: 4d1a709d-080f-4724-925d-c6ffd1f016cd
+*** Element info: {Using=xpath, value=//*[@id="news"]/tbody/tr/td[3]/button[2]/i }]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@id="news"]/tbody/tr/td[3]/button[2]/i 
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T16:15:26.402Z'
+System info: host: 'ANGLER109', ip: '192.168.219.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_74'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\rajesh.v\AppData\Local\Temp\rust_mozprofile.xef5r9WkzfBF, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=true, browserVersion=56.0, platformVersion=10.0, moz:processID=11276, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: 4d1a709d-080f-4724-925d-c6ffd1f016cd
+*** Element info: {Using=xpath, value=//*[@id="news"]/tbody/tr/td[3]/button[2]/i }
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:458)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at pageObjects.AnnouncementPage.Annon_delete_btn(AnnouncementPage.java:92)
+	at appModules.AnnouncementAction.Delete_Announcement(AnnouncementAction.java:184)
+	at executionEngine.Announcement.DeleteAnnouncement(Announcement.java:129)
+>>>>>>> Rajesh_Showtime
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
+<<<<<<< HEAD
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
@@ -92,11 +211,32 @@
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
+=======
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+>>>>>>> Rajesh_Showtime
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
             </full-stacktrace>
+<<<<<<< HEAD
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
@@ -107,5 +247,43 @@
         </test-method> <!-- execute_Logout -->
       </class> <!-- executionEngine.DelegatesTest -->
     </test> <!-- Edit -->
+=======
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteAnnouncement -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.Announcement@47c62251]" name="getResult" is-config="true" duration-ms="0" started-at="2017-10-16T09:56:42Z" finished-at="2017-10-16T09:56:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ViewAnnouncement status=SUCCESS method=Announcement.ViewAnnouncement(java.lang.String, java.lang.String)[pri:1, instance:executionEngine.Announcement@47c62251] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="execute_Logout()[pri:0, instance:executionEngine.Announcement@47c62251]" name="execute_Logout" is-config="true" duration-ms="8540" started-at="2017-10-16T09:58:06Z" finished-at="2017-10-16T09:58:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- execute_Logout -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:executionEngine.Announcement@47c62251]" name="getResult" is-config="true" duration-ms="0" started-at="2017-10-16T09:58:06Z" finished-at="2017-10-16T09:58:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=DeleteAnnouncement status=FAILURE method=Announcement.DeleteAnnouncement(java.lang.String, java.lang.String)[pri:2, instance:executionEngine.Announcement@47c62251] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:executionEngine.Announcement@47c62251]" name="teardown" is-config="true" duration-ms="359" started-at="2017-10-16T09:58:14Z" finished-at="2017-10-16T09:58:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- executionEngine.Announcement -->
+    </test> <!-- Add -->
+>>>>>>> Rajesh_Showtime
   </suite> <!-- Show time -->
 </testng-results>

@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 /executionEngine/
 /appModules/
 /testData/
 /utility/
 /pageObjects/
 /config/
+=======
+/jarfiles/
+/testData/
+/executionEngine/
+/appModules/
+/pageObjects/
+/utility/
+>>>>>>> Rajesh_Showtime
