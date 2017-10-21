@@ -282,34 +282,59 @@ public class Sponsortypeedit {
 		 //Finding the source and destination.
 		 
 		 
-		 WebElement source=driver.findElement(By.xpath("(//LI[@class='sort_list'])[3]"));
+		 WebElement source=driver.findElement(By.xpath("(//LI[@class='sort_list'])[1]"));
 		 
 		 WebElement destination=driver.findElement(By.xpath("(//LI[@class='sort_list'])[7]"));
 		 
 		 //Used when keyboard/mouse uses extended functionality like drag and drop
 		 //Actions -Group of actions
-		 Actions sort= new Actions(driver);
+		// Actions sort= new Actions(driver);
 		// sort.dragAndDrop(source, destination).release(destination).build().perform();
-		 sort.moveToElement(source).clickAndHold().dragAndDrop(source, destination).
-		 release(destination).perform();
+		// sort.moveToElement(source).clickAndHold().dragAndDrop(source, destination).
+		// release(destination).perform();
 		 
 		
 		 
 		/*
 		 //Action-Single action
-		 //Action dragAnddrop=
-				 sort.clickAndHold(source).moveToElement(destination);
+		 //Action dragAnddrop=*/
+				/* sort.clickAndHold(source).build().perform();
+				 sort.moveToElement(destination).build().perform();
+				 sort.release(destination).build().perform();*/
 				 
 				// sort.clickAndHold(source).
 				 
-		 sort.release(destination).build();
-		 sort.perform();*/
+		// sort.release(destination).build();
+		 //sort.perform();
 
-		 Thread.sleep(2000);
 		 
+		 /*------------------------------------------------*/
+		// Actions sort= new Actions(driver);
+		//Action dragdrop=sort.clickAndHold(source).moveToElement(destination).release(destination).build();
+		//dragdrop.perform();
+		 /*------------------------------------------------*/
+		 Actions sort= new Actions(driver);
+		/*System.out.println("tried to click");
+//		 sort.dragAndDrop(source, destination);
+		sort.clickAndHold(source).perform();
+		Thread.sleep(2000);
+		sort.moveToElement(destination).perform();
+		sort.release(destination).perform();
+		Thread.sleep(2000);
+		sort.build().perform();
+		 System.out.println("clicked");*/
+		 sort.clickAndHold(source).moveToElement(destination).perform();
 		 
+		 Thread.sleep(5000);
+//		 sort.moveToElement(destination).perform();
+//		 
+//		 sort.release(destination).build().perform();
+		 
+		
+		 
+		 		 
 		 System.out.println("Sort has been done successfully");
-		 
+		 Thread.sleep(1500);
 	     Sponsortype.saveSponsortypesort(driver).click();
 		 Thread.sleep(1000);
 		 alert=driver.switchTo().alert();
