@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Show time">
- 
+  <parameter name="username" value="eoty2017@showtimemobileapp.com"/> 
+  <parameter name="password" value="eoty2017"/>
+  
   <test name="Edit">
 	 <classes>
-   <class name="executionEngine.AboutEvent">
+   <class name="executionEngine.Sponsortypeexec">
        	<methods>
-       		<include name="AboutEventEdit" />
+       		<include name="Sponsortypeevent" />
        	</methods>
        </class>
        

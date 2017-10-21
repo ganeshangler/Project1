@@ -14,25 +14,25 @@ public class AboutEventEditAction {
 	{
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 
-		AboutEvent.editIcon(driver).click();
+		AboutEvent.editIcon(driver).click ();
 		//driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		WebElement ele = AboutEvent.CancelButton(driver);
 		JavascriptExecutor executor = (JavascriptExecutor)driver;
 		executor.executeScript("arguments[0].click();", ele);
 		AboutEvent.editIcon(driver).click();
 		AboutEvent.FacebookURL(driver).clear();
-		utility.Utilis.ScrollDown();
+		//utility.Utilis.ScrollDown();
 		AboutEvent.TwitterURL(driver).clear();
 		AboutEvent.YoutubeURL(driver).clear();
-		utility.Utilis.ScrollDown();
+		//utility.Utilis.ScrollDown();
 		WebElement element =AboutEvent.WebsiteURL(driver);
 		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", element);
 		element.clear();
 		AboutEvent.FacebookURL(driver).sendKeys(FacebookURL);
-		utility.Utilis.ScrollDown();
+		//utility.Utilis.ScrollDown();
 		AboutEvent.TwitterURL(driver).sendKeys(TwitterURL);
 		AboutEvent.YoutubeURL(driver).sendKeys(YoutubeURL);
-		utility.Utilis.ScrollDown();
+		//utility.Utilis.ScrollDown();
 		AboutEvent.WebsiteURL(driver).sendKeys(WebSiteURL);
 		//driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		WebElement ele1=AboutEvent.SaveButton(driver);

@@ -23,5 +23,22 @@ public class HomePage {
     	element = driver.findElement(parser.getLocator("Link_AboutEvent"));
     	return element;
 	}
-
+	
+	public static WebElement LogoutIcon(WebDriver driver) throws Exception
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element=driver.findElement(parser.getLocator("Logout"));
+		
+		return element;
+		
+	}
+   
+	public static WebElement Logoutlink(WebDriver driver) throws Exception
+	{
+		parser.RepositoryParser(Constants.path_ObjectRepo);
+		element=driver.findElement(parser.getLocator("LogoutLink"));
+		
+		return element;
+		
+	}
 }

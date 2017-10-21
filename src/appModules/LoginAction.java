@@ -21,6 +21,7 @@ public class LoginAction   {
 		LoginPage.Btn_Login(driver).click(); 
 		driver.manage().timeouts().implicitlyWait(Constants.implicitWaitSec, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		driver.manage().window().maximize();
 	}
 
 }
